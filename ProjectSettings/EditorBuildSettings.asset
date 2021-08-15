@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: c565564f01885804882cf2c26698c4b9
+  - enabled: 1
+    path: Assets/Scenes/Setup scenes/1 player setup.unity
+    guid: c0eb7a5e8bb12eb40bd44c9394d8aa59
+  - enabled: 1
+    path: Assets/Scenes/Setup scenes/2 player setup.unity
+    guid: 805507c0fe0140741b8647067cab6256
+  - enabled: 1
+    path: Assets/Scenes/1 player.unity
+    guid: aa593a608d850f34c8ef8fa50ba8804d
+  - enabled: 1
+    path: Assets/Scenes/2 player.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Shop - Ball Skins.unity
+    guid: 3cb4bef913da5b34fb3b90bb9a7669bd
+  - enabled: 1
+    path: Assets/Scenes/Shop - Locations.unity
+    guid: bf1872ad643c04f4b8bc894ed34d0600
+  - enabled: 1
+    path: Assets/Scenes/Shop - Mini Games.unity
+    guid: 8e2a10e02391bdc439199314c3777a4a
+  - enabled: 1
+    path: Assets/Scenes/Stats.unity
+    guid: ebc0a408e30c62b429c906228e7d824e
+  - enabled: 1
+    path: Assets/Scenes/Mini Games.unity
+    guid: 70a759bdefe21a84c82734a229b9fa8b
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 96a6793ef1093c747bb4149a2a52e0c9
+  - enabled: 1
+    path: Assets/Scenes/How To Play.unity
+    guid: 7c1266532d8134945a20a96d6561668a
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: b976d1068460ce841a2cacbb543fc7cd
+  - enabled: 1
+    path: Assets/Scenes/Mini Games/MiniGame (double kerb).unity
+    guid: d760ceb932213664c84bc3cf5dcfbc7d
+  - enabled: 1
+    path: Assets/Scenes/Mini Games/MiniGame (golden kerb).unity
+    guid: 3513dbf47ed1a7a48ae264c6afac3b67
+  - enabled: 1
+    path: Assets/Scenes/Mini Games/MiniGame (mars mission).unity
+    guid: eae5ad5dc0dbf9c4087b68fda4adfb8e
+  - enabled: 1
+    path: Assets/Scenes/Mini Games/MiniGame (shot in the dark).unity
+    guid: 2224e28336c24754f8ba8bc8e2cbe180
+  - enabled: 1
+    path: Assets/Scenes/Setup scenes/DoubleKerbSetup.unity
+    guid: 2ccf95eb6a535474cbe1772ab5fc3e4a
+  - enabled: 1
+    path: Assets/Scenes/Setup scenes/GoldenKerbSetup.unity
+    guid: 632c8cfd5f416ce43991d6ef0f1febb2
+  - enabled: 1
+    path: Assets/Scenes/Setup scenes/MarsMissionSetup.unity
+    guid: 824c099c99054984a886a3a2d494beec
+  - enabled: 1
+    path: Assets/Scenes/Setup scenes/ShotInDarkSetup.unity
+    guid: f94134be04c613245a6d5a5682a1a040
+  m_configObjects: {}
