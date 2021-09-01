@@ -74,13 +74,13 @@ public class AdsManagerScript : MonoBehaviour, IUnityAdsListener
     {
         getReward = true;
         // Check if UnityAds ready before calling Show method:
-        if (Advertisement.IsReady(mySurfacingId))
+        if (Advertisement.IsReady())
         {
-            Advertisement.Show(mySurfacingId);
+            Advertisement.Show();
         }
         else
         {
-            Debug.Log("Rewarded video is not ready at the moment! Please try again later!");
+            //Debug.Log("Rewarded video is not ready at the moment! Please try again later!");
             ShowError();
         }
         Initialise();
@@ -104,7 +104,7 @@ public class AdsManagerScript : MonoBehaviour, IUnityAdsListener
         }
         else if (showResult == ShowResult.Failed)
         {
-            Debug.LogWarning("The ad did not finish due to an error.");
+            //Debug.LogWarning("The ad did not finish due to an error.");
         }
     }
 

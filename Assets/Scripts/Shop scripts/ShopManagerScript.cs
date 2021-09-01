@@ -9,12 +9,10 @@ public class ShopManagerScript : MonoBehaviour
     public static int[,] shopItems = new int[5, 12];
     public int coins;
     public Text coinsTxt;
-    private static int firstLoad;
-
+    private static int firstLoad = 0;
 
     void Awake()
     {
-        firstLoad = PlayerPrefs.GetInt("firstLoadBalls");
         coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
         coinsTxt.text = coins.ToString();
 
@@ -47,24 +45,7 @@ public class ShopManagerScript : MonoBehaviour
 
         if (firstLoad == 0)
         {
-
-            //bought status (0 = not bought, 1 = bought)
-
-            shopItems[3, 1] = 0;
-            shopItems[3, 2] = 0;
-            shopItems[3, 3] = 0;
-            shopItems[3, 4] = 0;
-            shopItems[3, 5] = 0;
-            shopItems[3, 6] = 0;
-            shopItems[3, 7] = 0;
-            shopItems[3, 8] = 0;
-            shopItems[3, 9] = 0;
-            shopItems[3, 10] = 0;
-            shopItems[3, 11] = 1;
-
-
             firstLoad = 1;
-            PlayerPrefs.SetInt("firstLoadBalls", firstLoad);
 
             //active sprite status ( 1 = active)
 
@@ -84,7 +65,7 @@ public class ShopManagerScript : MonoBehaviour
         }
 
 
-        //default ball
+        //default ball has been bought
         shopItems[3, 11] = 1;
         PlayerPrefs.SetInt("ball11", shopItems[3, 11]);
 
@@ -128,27 +109,24 @@ public class ShopManagerScript : MonoBehaviour
         }
     }
 
-    public void BuyWithRank(GameObject ButtonRef)
+    public void BuyWithRank(int ID)
     {
         int rank = coinsTxt.GetComponent<Statistics>().rank;
-        if (rank >= ButtonRef.GetComponent<ButtonInfo>().requiredRank)
-        {
-            ButtonRef.GetComponent<Button>().interactable = false;
-            shopItems[3, ButtonRef.GetComponent<ButtonInfo>().itemID] = 1;
 
-            //save
-            PlayerPrefs.SetInt("ball1", shopItems[3, 1]);
-            PlayerPrefs.SetInt("ball2", shopItems[3, 2]);
-            PlayerPrefs.SetInt("ball3", shopItems[3, 3]);
-            PlayerPrefs.SetInt("ball4", shopItems[3, 4]);
-            PlayerPrefs.SetInt("ball5", shopItems[3, 5]);
-            PlayerPrefs.SetInt("ball6", shopItems[3, 6]);
-            PlayerPrefs.SetInt("ball7", shopItems[3, 8]);
-            PlayerPrefs.SetInt("ball8", shopItems[3, 9]);
-            PlayerPrefs.SetInt("ball9", shopItems[3, 0]);
-            PlayerPrefs.SetInt("ball10", shopItems[3, 10]);
-            PlayerPrefs.SetInt("ball11", shopItems[3, 11]);
-        }
+            shopItems[3, ID] = 1;
+
+        //save
+        PlayerPrefs.SetInt("ball1", shopItems[3, 1]);
+        PlayerPrefs.SetInt("ball2", shopItems[3, 2]);
+        PlayerPrefs.SetInt("ball3", shopItems[3, 3]);
+        PlayerPrefs.SetInt("ball4", shopItems[3, 4]);
+        PlayerPrefs.SetInt("ball5", shopItems[3, 5]);
+        PlayerPrefs.SetInt("ball6", shopItems[3, 6]);
+        PlayerPrefs.SetInt("ball7", shopItems[3, 8]);
+        PlayerPrefs.SetInt("ball8", shopItems[3, 9]);
+        PlayerPrefs.SetInt("ball9", shopItems[3, 0]);
+        PlayerPrefs.SetInt("ball10", shopItems[3, 10]);
+        PlayerPrefs.SetInt("ball11", shopItems[3, 11]);
     }
 
     public int GetItemAvailability(int ID)

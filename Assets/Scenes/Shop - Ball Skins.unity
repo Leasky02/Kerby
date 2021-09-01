@@ -583,6 +583,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -916,7 +921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298799219}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.2, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: 17.213017, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 1638800726}
@@ -1159,6 +1164,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 1
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 1775558520}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -1663,7 +1673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388487252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.2400036, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: -12.854859, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 583971044}
@@ -1725,7 +1735,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &403422425
+--- !u!1 &438291270
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1733,9 +1743,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 403422426}
-  - component: {fileID: 403422428}
-  - component: {fileID: 403422427}
+  - component: {fileID: 438291271}
+  - component: {fileID: 438291273}
+  - component: {fileID: 438291272}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1743,18 +1753,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &403422426
+--- !u!224 &438291271
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403422425}
+  m_GameObject: {fileID: 438291270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 409995965}
+  m_Father: {fileID: 1022636057}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1762,13 +1772,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &403422427
+--- !u!114 &438291272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403422425}
+  m_GameObject: {fileID: 438291270}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -1797,197 +1807,13 @@ MonoBehaviour:
   m_Text: 'Buy
 
 '
---- !u!222 &403422428
+--- !u!222 &438291273
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403422425}
-  m_CullTransparentMesh: 0
---- !u!1 &409995964
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 409995965}
-  - component: {fileID: 409995970}
-  - component: {fileID: 409995969}
-  - component: {fileID: 409995968}
-  - component: {fileID: 409995967}
-  - component: {fileID: 409995966}
-  m_Layer: 5
-  m_Name: Buy button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &409995965
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409995964}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.0008, y: 0.00095, z: 0.011119187}
-  m_Children:
-  - {fileID: 403422426}
-  m_Father: {fileID: 797315808}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0006313324, y: -0.099999964}
-  m_SizeDelta: {x: 200, y: 70.86012}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &409995966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409995964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a45d02d592f5a4ab7e36775eee93e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalPointsDisplay: {fileID: 0}
-  accuracyDisplay: {fileID: 0}
-  highestStreakDisplay: {fileID: 0}
-  highestStreakDisplayShotInTheDark: {fileID: 0}
-  highestStreakDisplayMarsMission: {fileID: 0}
-  gamesPlayedDisplay: {fileID: 0}
-  doubleKerbDisplay: {fileID: 0}
-  rankDisplay: {fileID: 0}
-  rankIconDisplay: {fileID: 0}
-  RankPauseScreen: {fileID: 0}
-  rankNameDisplay: {fileID: 0}
-  rankIcons: []
-  rankProgressDisplay: {fileID: 0}
-  rank: 0
-  startingRank: 0
-  rankProgress: 0
-  currentRankIcon: 0
-  showStats: 0
-  showRank: 0
-  Player1Game: 0
-  Player2Game: 0
-  miniGame: 0
---- !u!114 &409995967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409995964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dc2998d14dd681408b5ed72c55826e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemID: 10
-  priceTxt: {fileID: 948694432}
-  shopManager: {fileID: 1775558520}
-  requiredRank: 0
-  coins: {fileID: 1836799505}
-  rank: 0
---- !u!114 &409995968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409995964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.4745098, g: 0.4745098, b: 0.4745098, a: 1}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 409995969}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1775558522}
-        m_MethodName: BuyWithCoins
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 409995964}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &409995969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409995964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3e3d88f5cbf7f8546b939b3896d139f8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &409995970
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409995964}
+  m_GameObject: {fileID: 438291270}
   m_CullTransparentMesh: 0
 --- !u!1 &446981487
 GameObject:
@@ -2241,7 +2067,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467098382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.7629995, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: 12.152991, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 1592782360}
@@ -2724,7 +2550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680557327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2600117, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: -17.83485, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 2088863213}
@@ -3132,7 +2958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754873085}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.862999, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: -2.9469976, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 628269269}
@@ -3375,6 +3201,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 1
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 1775558520}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -3403,10 +3234,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797315807}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.18, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: -7.9148617, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
-  - {fileID: 409995965}
+  - {fileID: 1022636057}
   - {fileID: 1976738044}
   - {fileID: 1959488128}
   - {fileID: 948694434}
@@ -4030,6 +3861,195 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017367220}
   m_CullTransparentMesh: 0
+--- !u!1 &1022636056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1022636057}
+  - component: {fileID: 1022636062}
+  - component: {fileID: 1022636061}
+  - component: {fileID: 1022636060}
+  - component: {fileID: 1022636059}
+  - component: {fileID: 1022636058}
+  m_Layer: 5
+  m_Name: Buy button (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1022636057
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022636056}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.00080000004, y: 0.0009500001, z: 0.011119188}
+  m_Children:
+  - {fileID: 438291271}
+  m_Father: {fileID: 797315808}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.099999964}
+  m_SizeDelta: {x: 200, y: 70.86012}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1022636058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022636056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a45d02d592f5a4ab7e36775eee93e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPointsDisplay: {fileID: 0}
+  accuracyDisplay: {fileID: 0}
+  highestStreakDisplay: {fileID: 0}
+  highestStreakDisplayShotInTheDark: {fileID: 0}
+  highestStreakDisplayMarsMission: {fileID: 0}
+  gamesPlayedDisplay: {fileID: 0}
+  doubleKerbDisplay: {fileID: 0}
+  rankDisplay: {fileID: 0}
+  rankIconDisplay: {fileID: 0}
+  RankPauseScreen: {fileID: 0}
+  rankNameDisplay: {fileID: 0}
+  rankIcons: []
+  rankProgressDisplay: {fileID: 0}
+  rank: 0
+  startingRank: 0
+  rankProgress: 0
+  currentRankIcon: 0
+  showStats: 0
+  showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
+  Player1Game: 0
+  Player2Game: 0
+  miniGame: 0
+--- !u!114 &1022636059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022636056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc2998d14dd681408b5ed72c55826e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 10
+  priceTxt: {fileID: 1176286224}
+  shopManager: {fileID: 1775558520}
+  requiredRank: 0
+  coins: {fileID: 1836799505}
+  rank: 0
+--- !u!114 &1022636060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022636056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.4745098, g: 0.4745098, b: 0.4745098, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1022636061}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1775558522}
+        m_MethodName: BuyWithCoins
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1022636056}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1022636061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022636056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3e3d88f5cbf7f8546b939b3896d139f8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1022636062
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022636056}
+  m_CullTransparentMesh: 0
 --- !u!1 &1045989788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4507,6 +4527,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -4956,6 +4981,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -4984,7 +5014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355137664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.795998, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: 7.12, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 1946719417}
@@ -5336,7 +5366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451817667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.22699, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: 22.24, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 2092070468}
@@ -6607,8 +6637,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.261, y: 0.98}
-  m_SizeDelta: {x: 49.569622, y: 5.407404}
+  m_AnchoredPosition: {x: 16.435862, y: 0.98}
+  m_SizeDelta: {x: 49.919415, y: 5.407404}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1714971411
 GameObject:
@@ -7238,6 +7268,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -8104,6 +8139,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 1
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 1775558520}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -8141,8 +8181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0018911362, y: -0.02100334}
-  m_SizeDelta: {x: 450, y: 500}
+  m_AnchoredPosition: {x: 0.0018911362, y: -0.0229}
+  m_SizeDelta: {x: 450, y: 111.69203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1976738045
 MonoBehaviour:
@@ -8210,7 +8250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980918711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7559872, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: -22.850847, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 1887719877}
@@ -8852,7 +8892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117948947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.805998, y: 0.07400036, z: 0}
+  m_LocalPosition: {x: 2.1099958, y: 0.07400036, z: 0}
   m_LocalScale: {x: 15, y: 11.85083, z: 0.6964298}
   m_Children:
   - {fileID: 708619563}
@@ -9173,6 +9213,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 1
+  shopManager: {fileID: 1775558520}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0

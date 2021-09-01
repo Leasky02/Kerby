@@ -2183,6 +2183,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530993534}
   m_CullTransparentMesh: 0
+--- !u!1 &538692407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538692409}
+  - component: {fileID: 538692408}
+  m_Layer: 0
+  m_Name: Tutorial Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &538692408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538692407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b664b99e0610c2742be40620d56f1091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &538692409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538692407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.152643, y: 2.8751528, z: 58.511242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &541755642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,6 +2682,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -4266,6 +4314,7 @@ GameObject:
   - component: {fileID: 880840481}
   - component: {fileID: 880840483}
   - component: {fileID: 880840482}
+  - component: {fileID: 880840484}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4333,6 +4382,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880840480}
   m_CullTransparentMesh: 0
+--- !u!114 &880840484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880840480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a45d02d592f5a4ab7e36775eee93e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPointsDisplay: {fileID: 0}
+  accuracyDisplay: {fileID: 0}
+  highestStreakDisplay: {fileID: 0}
+  highestStreakDisplayShotInTheDark: {fileID: 0}
+  highestStreakDisplayMarsMission: {fileID: 0}
+  gamesPlayedDisplay: {fileID: 0}
+  doubleKerbDisplay: {fileID: 0}
+  rankDisplay: {fileID: 0}
+  rankIconDisplay: {fileID: 0}
+  RankPauseScreen: {fileID: 0}
+  rankNameDisplay: {fileID: 0}
+  rankIcons: []
+  rankProgressDisplay: {fileID: 0}
+  rank: 0
+  startingRank: 0
+  rankProgress: 0
+  currentRankIcon: 0
+  showStats: 0
+  showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 1
+  shopManager: {fileID: 1067094063}
+  Player1Game: 0
+  Player2Game: 0
+  miniGame: 0
 --- !u!1 &890762754
 GameObject:
   m_ObjectHideFlags: 0
@@ -6940,6 +7028,7 @@ GameObject:
   - component: {fileID: 1501325583}
   - component: {fileID: 1501325582}
   - component: {fileID: 1501325581}
+  - component: {fileID: 1501325585}
   m_Layer: 5
   m_Name: Select button
   m_TagString: Untagged
@@ -7072,6 +7161,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501325579}
   m_CullTransparentMesh: 0
+--- !u!114 &1501325585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501325579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a45d02d592f5a4ab7e36775eee93e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPointsDisplay: {fileID: 0}
+  accuracyDisplay: {fileID: 0}
+  highestStreakDisplay: {fileID: 0}
+  highestStreakDisplayShotInTheDark: {fileID: 0}
+  highestStreakDisplayMarsMission: {fileID: 0}
+  gamesPlayedDisplay: {fileID: 0}
+  doubleKerbDisplay: {fileID: 0}
+  rankDisplay: {fileID: 0}
+  rankIconDisplay: {fileID: 0}
+  RankPauseScreen: {fileID: 0}
+  rankNameDisplay: {fileID: 0}
+  rankIcons: []
+  rankProgressDisplay: {fileID: 0}
+  rank: 0
+  startingRank: 0
+  rankProgress: 0
+  currentRankIcon: 0
+  showStats: 0
+  showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 1
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 1067094063}
+  Player1Game: 0
+  Player2Game: 0
+  miniGame: 0
 --- !u!1 &1550707517
 GameObject:
   m_ObjectHideFlags: 0
@@ -7551,6 +7679,7 @@ GameObject:
   - component: {fileID: 1667225442}
   - component: {fileID: 1667225441}
   - component: {fileID: 1667225440}
+  - component: {fileID: 1667225444}
   m_Layer: 5
   m_Name: Select button
   m_TagString: Untagged
@@ -7683,6 +7812,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667225438}
   m_CullTransparentMesh: 0
+--- !u!114 &1667225444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667225438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a45d02d592f5a4ab7e36775eee93e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPointsDisplay: {fileID: 0}
+  accuracyDisplay: {fileID: 0}
+  highestStreakDisplay: {fileID: 0}
+  highestStreakDisplayShotInTheDark: {fileID: 0}
+  highestStreakDisplayMarsMission: {fileID: 0}
+  gamesPlayedDisplay: {fileID: 0}
+  doubleKerbDisplay: {fileID: 0}
+  rankDisplay: {fileID: 0}
+  rankIconDisplay: {fileID: 0}
+  RankPauseScreen: {fileID: 0}
+  rankNameDisplay: {fileID: 0}
+  rankIcons: []
+  rankProgressDisplay: {fileID: 0}
+  rank: 0
+  startingRank: 0
+  rankProgress: 0
+  currentRankIcon: 0
+  showStats: 0
+  showRank: 0
+  attemptBallUnlock5: 1
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 1067094063}
+  Player1Game: 0
+  Player2Game: 0
+  miniGame: 0
 --- !u!1 &1729457353
 GameObject:
   m_ObjectHideFlags: 0
@@ -7777,6 +7945,7 @@ GameObject:
   - component: {fileID: 1737281177}
   - component: {fileID: 1737281176}
   - component: {fileID: 1737281175}
+  - component: {fileID: 1737281179}
   m_Layer: 5
   m_Name: Select button
   m_TagString: Untagged
@@ -7909,6 +8078,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737281173}
   m_CullTransparentMesh: 0
+--- !u!114 &1737281179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737281173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a45d02d592f5a4ab7e36775eee93e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPointsDisplay: {fileID: 0}
+  accuracyDisplay: {fileID: 0}
+  highestStreakDisplay: {fileID: 0}
+  highestStreakDisplayShotInTheDark: {fileID: 0}
+  highestStreakDisplayMarsMission: {fileID: 0}
+  gamesPlayedDisplay: {fileID: 0}
+  doubleKerbDisplay: {fileID: 0}
+  rankDisplay: {fileID: 0}
+  rankIconDisplay: {fileID: 0}
+  RankPauseScreen: {fileID: 0}
+  rankNameDisplay: {fileID: 0}
+  rankIcons: []
+  rankProgressDisplay: {fileID: 0}
+  rank: 0
+  startingRank: 0
+  rankProgress: 0
+  currentRankIcon: 0
+  showStats: 0
+  showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 1
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 1067094063}
+  Player1Game: 0
+  Player2Game: 0
+  miniGame: 0
 --- !u!1 &1817721678
 GameObject:
   m_ObjectHideFlags: 0
@@ -8763,15 +8971,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2002843261}
-        m_MethodName: LoadScene
-        m_Mode: 1
+      - m_Target: {fileID: 538692408}
+        m_MethodName: DoTutorial
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 2 Player
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2002843263

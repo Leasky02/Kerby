@@ -9,12 +9,11 @@ public class ShopManagerScriptLocations : MonoBehaviour
     public static int[,] shopItems = new int[5, 7];
     public int coins;
     public Text coinsTxt;
-    private static int firstLoad;
+    private static int firstLoad = 0;
 
 
     void Awake()
     {
-        firstLoad = PlayerPrefs.GetInt("firstLoadLocations");
         coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
         coinsTxt.text = coins.ToString();
 
@@ -47,17 +46,7 @@ public class ShopManagerScriptLocations : MonoBehaviour
             shopItems[2, 5] = 500;
 
 
-            //bought status (0 = not bought, 1 = bought)
-
-            shopItems[3, 1] = 0;
-            shopItems[3, 2] = 0;
-            shopItems[3, 3] = 0;
-            shopItems[3, 4] = 0;
-            shopItems[3, 5] = 0;
-
-
             firstLoad = 1;
-            PlayerPrefs.SetInt("firstLoadLocations", firstLoad);
 
             //active sprite status ( 1 = active)
 

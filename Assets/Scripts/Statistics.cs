@@ -49,6 +49,12 @@ public class Statistics : MonoBehaviour
 
     public bool showStats;
     public bool showRank;
+    public bool attemptBallUnlock5;
+    public bool attemptBallUnlock10;
+    public bool attemptBallUnlock15;
+    public bool attemptBallUnlock20;
+
+    [SerializeField] private GameObject shopManager;
 
     public bool Player1Game;
     public bool Player2Game;
@@ -243,6 +249,27 @@ public class Statistics : MonoBehaviour
                     currentRankIcon = 24;
                 rankIconDisplay.GetComponent<SpriteRenderer>().sprite = rankIcons[currentRankIcon];
             }
+        }
+
+        if(attemptBallUnlock5)
+        {
+            if (rank > 4)
+                shopManager.GetComponent<ShopManagerScript>().BuyWithRank(1);
+        }
+        if (attemptBallUnlock10)
+        {
+            if (rank > 9)
+                shopManager.GetComponent<ShopManagerScript>().BuyWithRank(2);
+        }
+        if (attemptBallUnlock15)
+        {
+            if (rank > 14)
+                shopManager.GetComponent<ShopManagerScript>().BuyWithRank(3);
+        }
+        if (attemptBallUnlock20)
+        {
+            if (rank > 19)
+                shopManager.GetComponent<ShopManagerScript>().BuyWithRank(4);
         }
     }
 }

@@ -23,6 +23,7 @@ public class ButtonInfoMiniGamesSetup : MonoBehaviour
             newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
             GetComponent<Button>().colors = newColorBlock;
             GetComponent<Button>().interactable = false;
+            GetComponentInChildren<Text>().text = ("Locked");
         }
     }
 }

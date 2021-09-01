@@ -12,7 +12,7 @@ public class ButtonInfoLocations : MonoBehaviour
     public GameObject coins;
     public int rank;
 
-    void Start()
+    private void Update()
     {
         rank = GetComponent<Statistics>().rank;
         var newColorBlock = GetComponent<Button>().colors;
@@ -21,6 +21,7 @@ public class ButtonInfoLocations : MonoBehaviour
             newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
             GetComponent<Button>().colors = newColorBlock;
             GetComponent<Button>().interactable = false;
+            GetComponentInChildren<Text>().text = ("Owned");
         }
         else if (rank < requiredRank || coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScriptLocations>().GetPrice(itemID))
         {
@@ -35,11 +36,8 @@ public class ButtonInfoLocations : MonoBehaviour
         {
             GetComponent<Button>().interactable = true;
         }
-    }
 
-    private void Update()
-    {
-        var newColorBlock = GetComponent<Button>().colors;
+
         if (coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScriptLocations>().GetPrice(itemID))
         {
             if (shopManager.GetComponent<ShopManagerScriptLocations>().GetItemAvailability(itemID) == 0)
@@ -47,6 +45,7 @@ public class ButtonInfoLocations : MonoBehaviour
                 newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
                 GetComponent<Button>().colors = newColorBlock;
                 GetComponent<Button>().interactable = false;
+                GetComponentInChildren<Text>().text = ("Locked");
             }
         }
     }
