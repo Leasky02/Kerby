@@ -29,6 +29,8 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
         activeSpriteID[9] = GetComponent<ShopManagerScript>().IsSelected(9);
         activeSpriteID[10] = GetComponent<ShopManagerScript>().IsSelected(10);
         activeSpriteID[11] = GetComponent<ShopManagerScript>().IsSelected(11);
+        
+        var psMain = missParticles.main;
 
         if (activeSpriteID[1] == 1) // blue bball
         {
@@ -36,7 +38,7 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
             //basketball bounce
             ballCollisions.bounceSound = rubberBounce;
             //blue
-            missParticles.startColor = new Color(0.058f, 0.101f, 0.960f);
+            psMain.startColor = new Color(0.058f, 0.101f, 0.960f);
         }
         else if (activeSpriteID[2] == 1) // yellow bball
         {
@@ -45,7 +47,7 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
             ballCollisions.bounceSound = rubberBounce;
 
             mySpriteRenderer.sprite = ballSprites[2];
-            missParticles.startColor = new Color(0.941f, 0.984f, 0.035f);
+            psMain.startColor = new Color(0.941f, 0.984f, 0.035f);
         }
         else if (activeSpriteID[3] == 1) //red bball
         {
@@ -54,7 +56,7 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
             ballCollisions.bounceSound = rubberBounce;
 
             mySpriteRenderer.sprite = ballSprites[3];
-            missParticles.startColor = new Color(1f, 0.058f, 0.058f);
+            psMain.startColor = new Color(1f, 0.058f, 0.058f);
         }
         else if (activeSpriteID[4] == 1) //purple bball
         {
@@ -63,13 +65,13 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
             ballCollisions.bounceSound = rubberBounce;
 
             mySpriteRenderer.sprite = ballSprites[4];
-            missParticles.startColor = new Color(0, 0, 0);
+            psMain.startColor = new Color(0, 0, 0);
         }
         else if (activeSpriteID[5] == 1) // tractor wheel
         {
             //grey
             //basketball bounce
-            missParticles.startColor = new Color(0.121f, 0.121f, 0.121f);
+            psMain.startColor = new Color(0.121f, 0.121f, 0.121f);
             ballCollisions.bounceSound = rubberBounce;
 
             mySpriteRenderer.sprite = ballSprites[5];
@@ -78,7 +80,7 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
         {
             //white
             //stone bounce
-            missParticles.startColor = new Color(1, 1, 1);
+            psMain.startColor = new Color(1, 1, 1);
             ballCollisions.bounceSound = stoneBounce;
             mySpriteRenderer.sprite = ballSprites[6];
         }
@@ -88,13 +90,13 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
             //sludge bounce
             ballCollisions.bounceSound = sludgeBounce;
             mySpriteRenderer.sprite = ballSprites[7];
-            missParticles.startColor = new Color(0.901f, 0.827f, 0.717f);
+            psMain.startColor = new Color(0.901f, 0.827f, 0.717f);
         }
         else if (activeSpriteID[8] == 1) //watermelon
         {
             //dark green
             //sludge bounce
-            missParticles.startColor = new Color(0.184f, 0.447f, 0.133f);
+            psMain.startColor = new Color(0.184f, 0.447f, 0.133f);
             ballCollisions.bounceSound = sludgeBounce;
             mySpriteRenderer.sprite = ballSprites[8];
         }
@@ -102,7 +104,7 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
         {
             //light blue
             //stone bounce
-            missParticles.startColor = new Color(0.513f, 0.807f, 0.749f);
+            psMain.startColor = new Color(0.513f, 0.807f, 0.749f);
             ballCollisions.bounceSound = stoneBounce;
             mySpriteRenderer.sprite = ballSprites[9];
         }
@@ -110,7 +112,7 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
         {
             //gold
             //money bounce
-            missParticles.startColor = new Color(0.941f, 0.984f, 0.035f);
+            psMain.startColor = new Color(0.941f, 0.984f, 0.035f);
             ballCollisions.bounceSound = moneyBounce;
             mySpriteRenderer.sprite = ballSprites[10];
         }
@@ -119,7 +121,7 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
             //orange
             ballCollisions.bounceSound = rubberBounce;
             mySpriteRenderer.sprite = ballSprites[11];
-            missParticles.startColor = new Color(0.972f, 0.564f, 0f);
+            psMain.startColor = new Color(0.972f, 0.564f, 0f);
         }
     }
 }

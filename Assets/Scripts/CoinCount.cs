@@ -34,7 +34,8 @@ public class CoinCount : MonoBehaviour
         totalCoins += coinCount;
         DisplayCoins();
         GetComponent<AudioSource>().Play();
-        ps.GetComponent<ParticleSystem>().maxParticles = coinCount;
+        var psMain = ps.GetComponent<ParticleSystem>().main;
+        psMain.maxParticles = coinCount;
         ps.Play();
         PlayerPrefs.SetInt("coins", totalCoins);
     }
@@ -62,9 +63,8 @@ public class CoinCount : MonoBehaviour
     {
         jackpotTotal += coins;
         GetComponent<AudioSource>().Play();
-        ps.GetComponent<ParticleSystem>().maxParticles = coins;
-        if (ps.GetComponent<ParticleSystem>().maxParticles > 15)
-            ps.GetComponent<ParticleSystem>().maxParticles = 15;
+        var psMain = ps.GetComponent<ParticleSystem>().main;
+        psMain.maxParticles = Mathf.Min(coins, 15);
         ps.Play();
     }
 
