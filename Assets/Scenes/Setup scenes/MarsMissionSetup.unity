@@ -1816,7 +1816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -2067,7 +2067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -2821,7 +2821,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -2967,7 +2967,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -3313,7 +3313,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -3458,7 +3458,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -3918,7 +3918,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -4141,7 +4141,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -6424,7 +6424,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663658934}
+      - m_Target: {fileID: 1663658935}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:

@@ -64,6 +64,6 @@ public class AlienMovementScript : MonoBehaviour
         Vector2 direction = (patrolPoints[currentPoint] - (Vector2)transform.position).normalized;
 
         // Move in the correct direction with the set force strength
-        ourRigidbody.AddForce(direction * forceStrength);
+        ourRigidbody.AddForce(direction * forceStrength * Time.deltaTime);
     }
 }

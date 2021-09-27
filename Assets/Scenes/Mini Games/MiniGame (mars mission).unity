@@ -12226,6 +12226,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 1
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 1
   Player2Game: 0
   miniGame: 0
@@ -13410,7 +13415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aac615eb7ad2b241a396678d4d68d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceStrength: 50
+  forceStrength: 1000
   stopDistance: 0.1
   patrolPoints:
   - {x: -8, y: 2}

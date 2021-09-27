@@ -57,6 +57,7 @@ public class ButtonInfoLocationsSetup : MonoBehaviour
             {
                 //if not then its available
                 GetComponent<Button>().interactable = true;
+                GetComponentInChildren<Text>().text = ("Select");
             }
         }
         //if it hasnt been bought...
