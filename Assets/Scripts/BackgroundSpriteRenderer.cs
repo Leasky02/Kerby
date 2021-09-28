@@ -55,5 +55,31 @@ public class BackgroundSpriteRenderer : MonoBehaviour
             skyColor.GetComponent<SpriteRenderer>().color = newYorkColor;
             mySpriteRenderer.sprite = ballSprites[6];
         }
+
+        ResizeToFitDevice();
+    }
+
+    private void ResizeToFitDevice()
+    {
+        var topRightCorner = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        var worldSpaceWidth = topRightCorner.x * 2;
+        var worldSpaceHeight = topRightCorner.y * 2;
+
+        var spriteSize = mySpriteRenderer.bounds.size;
+
+        var scaleFactorX = worldSpaceWidth / spriteSize.x;
+        var scaleFactorY = worldSpaceHeight / spriteSize.y;
+
+        // Maintain aspect ratio
+        if (scaleFactorX > scaleFactorY)
+        {
+            scaleFactorY = scaleFactorX;
+        }
+        else
+        {
+            scaleFactorX = scaleFactorY;
+        }
+
+        mySpriteRenderer.transform.localScale = new Vector3(scaleFactorX, scaleFactorY, 1);
     }
 }
