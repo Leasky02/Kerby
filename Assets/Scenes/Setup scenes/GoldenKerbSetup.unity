@@ -268,7 +268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Himalayas
+  m_Text: Rainforest
 
 '
 --- !u!222 &164788747
@@ -334,7 +334,10 @@ MonoBehaviour:
   totalPointsDisplay: {fileID: 0}
   accuracyDisplay: {fileID: 0}
   highestStreakDisplay: {fileID: 0}
+  highestStreakDisplayShotInTheDark: {fileID: 0}
+  highestStreakDisplayMarsMission: {fileID: 0}
   gamesPlayedDisplay: {fileID: 0}
+  doubleKerbDisplay: {fileID: 0}
   rankDisplay: {fileID: 0}
   rankIconDisplay: {fileID: 0}
   RankPauseScreen: {fileID: 0}
@@ -347,6 +350,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -365,6 +373,12 @@ MonoBehaviour:
   ps: {fileID: 0}
   jackpotTotal: 0
   displayCoins: 0
+  AdsManager: {fileID: 0}
+  currentStreak: {fileID: 0}
+  claimButton: {fileID: 0}
+  Ball: {fileID: 0}
+  jackpotAudio: {fileID: 0}
+  inGame: 0
 --- !u!82 &197559212
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1142,7 +1156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780e7e2f8712ad44baf11f21ccc1b108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 4
+  itemID: 5
   shopManager: {fileID: 1468621572}
 --- !u!114 &737260256
 MonoBehaviour:
@@ -1283,7 +1297,7 @@ GameObject:
   - component: {fileID: 784582267}
   - component: {fileID: 784582268}
   m_Layer: 0
-  m_Name: Item 4 - rainforest
+  m_Name: Item 4 - himalayas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1674,7 +1688,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rainforest
+  m_Text: Himalayas
 --- !u!222 &985816247
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1694,7 +1708,7 @@ GameObject:
   - component: {fileID: 1012532834}
   - component: {fileID: 1012532835}
   m_Layer: 0
-  m_Name: Item 5 - himalayas
+  m_Name: Item 5 - rainforest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2226,7 +2240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780e7e2f8712ad44baf11f21ccc1b108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 5
+  itemID: 4
   shopManager: {fileID: 1468621572}
 --- !u!114 &1211841458
 MonoBehaviour:
