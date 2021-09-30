@@ -6,13 +6,14 @@ using UnityEngine.EventSystems;
 
 public class ShopManagerScriptLocations : MonoBehaviour
 {
+    private const int ITEM_COUNT = 7;
 
-    public static int[,] shopItems = new int[5, 7];
+    public static int[,] shopItems = new int[5, ITEM_COUNT];
     public int coins;
     public Text coinsTxt;
 
-    private Sprite[] backgroundSprites = new Sprite[7];
-    private Color[] skyColors = new Color[7];
+    private Sprite[] backgroundSprites = new Sprite[ITEM_COUNT];
+    private Color[] skyColors = new Color[ITEM_COUNT];
 
     private static int firstLoad = 0;
 
@@ -92,13 +93,14 @@ public class ShopManagerScriptLocations : MonoBehaviour
     public void BuyWithCoins(GameObject ButtonRef)
     {
         coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
-        if (coins >= shopItems[PRICE_INDEX, ButtonRef.GetComponent<ButtonInfoLocations>().itemID])
+        int buttonLocationID = ButtonRef.GetComponent<ButtonInfoLocations>().itemID;
+        if (coins >= shopItems[PRICE_INDEX, buttonLocationID])
         {
-            coins -= shopItems[PRICE_INDEX, ButtonRef.GetComponent<ButtonInfoLocations>().itemID];
+            coins -= shopItems[PRICE_INDEX, buttonLocationID];
             ButtonRef.GetComponent<Button>().interactable = false;
-            coinsTxt.GetComponent<CoinCount>().SubtractCoins(shopItems[PRICE_INDEX, ButtonRef.GetComponent<ButtonInfoLocations>().itemID]);
+            coinsTxt.GetComponent<CoinCount>().SubtractCoins(shopItems[PRICE_INDEX, buttonLocationID]);
             GetComponent<AudioSource>().Play();
-            shopItems[PUCHASED_INDEX, ButtonRef.GetComponent<ButtonInfoLocations>().itemID] = 1;
+            shopItems[PUCHASED_INDEX, buttonLocationID] = 1;
 
             SaveToPlayerPrefs();
         }
@@ -136,7 +138,7 @@ public class ShopManagerScriptLocations : MonoBehaviour
         int locationID = ButtonRef.GetComponent<ButtonInfoLocationsSetup>().itemID;
         if (IsItemAvailable(locationID))
         {
-            foreach (int ID in shopItems)
+            for (int ID = 0; ID < ITEM_COUNT; ++ID)
             {
                 shopItems[ACTIVE_INDEX, ID] = 0;
             }
@@ -156,7 +158,7 @@ public class ShopManagerScriptLocations : MonoBehaviour
 
     public int GetSelectedLocationID()
     {
-        foreach (int ID in shopItems)
+        for (int ID = 0; ID < ITEM_COUNT; ++ID)
         {
             if (IsSelected(ID))
             {
