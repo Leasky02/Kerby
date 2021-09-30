@@ -17,7 +17,7 @@ public class ButtonInfo : MonoBehaviour
     {
         rank = GetComponent<Statistics>().rank;
         var newColorBlock = GetComponent<Button>().colors;
-        if (shopManager.GetComponent<ShopManagerScript>().GetItemAvailability(itemID) == 1)
+        if (shopManager.GetComponent<ShopManagerScript>().IsItemAvailable(itemID))
         {
             //grey
             newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
@@ -27,29 +27,14 @@ public class ButtonInfo : MonoBehaviour
         }
         else if (rank < requiredRank || coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScript>().GetPrice(itemID))
         {
-            if (shopManager.GetComponent<ShopManagerScript>().GetItemAvailability(itemID) == 0)
-            {
-                newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-                GetComponent<Button>().colors = newColorBlock;
-                GetComponent<Button>().interactable = false;
-                GetComponentInChildren<Text>().text = ("Locked");
-            }
+            newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
+            GetComponent<Button>().colors = newColorBlock;
+            GetComponent<Button>().interactable = false;
+            GetComponentInChildren<Text>().text = ("Locked");
         }
         else
         {
             GetComponent<Button>().interactable = true;
-        }
-
-        if (coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScript>().GetPrice(itemID))
-        {
-            if (shopManager.GetComponent<ShopManagerScript>().GetItemAvailability(itemID) == 0)
-            {
-                //red
-                newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-                GetComponent<Button>().colors = newColorBlock;
-                GetComponent<Button>().interactable = false;
-                GetComponentInChildren<Text>().text = ("Locked");
-            }
         }
     }
 }

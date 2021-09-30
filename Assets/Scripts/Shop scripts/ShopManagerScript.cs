@@ -6,9 +6,18 @@ using UnityEngine.EventSystems;
 
 public class ShopManagerScript : MonoBehaviour
 {
-    public static int[,] shopItems = new int[5, 12];
+    private const int ITEM_COUNT = 12;
+
+    private const int ID_INDEX = 0;
+    private const int PRICE_INDEX = 1;
+    private const int PUCHASED_INDEX = 2;
+    private const int ACTIVE_INDEX = 3;
+    private const int SHOP_ITEM_ROWS = 4;
+
+    public static int[,] shopItems = new int[SHOP_ITEM_ROWS, ITEM_COUNT];
     public int coins;
     public Text coinsTxt;
+
     private static int firstLoad = 0;
 
     void Awake()
@@ -17,153 +26,146 @@ public class ShopManagerScript : MonoBehaviour
         coinsTxt.text = coins.ToString();
 
         //ID'S
-        shopItems[1, 1] = 1;
-        shopItems[1, 2] = 2;
-        shopItems[1, 3] = 3;
-        shopItems[1, 4] = 4;
-        shopItems[1, 5] = 5;
-        shopItems[1, 6] = 6;
-        shopItems[1, 7] = 7;
-        shopItems[1, 8] = 8;
-        shopItems[1, 9] = 9;
-        shopItems[1, 10] = 10;
+        shopItems[ID_INDEX, 1] = 1;
+        shopItems[ID_INDEX, 2] = 2;
+        shopItems[ID_INDEX, 3] = 3;
+        shopItems[ID_INDEX, 4] = 4;
+        shopItems[ID_INDEX, 5] = 5;
+        shopItems[ID_INDEX, 6] = 6;
+        shopItems[ID_INDEX, 7] = 7;
+        shopItems[ID_INDEX, 8] = 8;
+        shopItems[ID_INDEX, 9] = 9;
+        shopItems[ID_INDEX, 10] = 10;
 
         //original ball
-        shopItems[1, 11] = 11;
+        shopItems[ID_INDEX, 11] = 11;
 
         //price
-        shopItems[2, 1] = 5;
-        shopItems[2, 2] = 10;
-        shopItems[2, 3] = 15;
-        shopItems[2, 4] = 20;
-        shopItems[2, 5] = 50;
-        shopItems[2, 6] = 50;
-        shopItems[2, 7] = 150;
-        shopItems[2, 8] = 150;
-        shopItems[2, 9] = 150;
-        shopItems[2, 10] = 150;
+        shopItems[PRICE_INDEX, 1] = 5;
+        shopItems[PRICE_INDEX, 2] = 10;
+        shopItems[PRICE_INDEX, 3] = 15;
+        shopItems[PRICE_INDEX, 4] = 20;
+        shopItems[PRICE_INDEX, 5] = 50;
+        shopItems[PRICE_INDEX, 6] = 50;
+        shopItems[PRICE_INDEX, 7] = 150;
+        shopItems[PRICE_INDEX, 8] = 150;
+        shopItems[PRICE_INDEX, 9] = 150;
+        shopItems[PRICE_INDEX, 10] = 150;
 
         if (firstLoad == 0)
         {
             firstLoad = 1;
 
-            //active sprite status ( 1 = active)
-
-            shopItems[4, 1] = 0;
-            shopItems[4, 2] = 0;
-            shopItems[4, 3] = 0;
-            shopItems[4, 4] = 0;
-            shopItems[4, 5] = 0;
-            shopItems[4, 6] = 0;
-            shopItems[4, 7] = 0;
-            shopItems[4, 8] = 0;
-            shopItems[4, 9] = 0;
-            shopItems[4, 10] = 0;
+            //active sprite status (1 = active)
+            shopItems[ACTIVE_INDEX, 1] = 0;
+            shopItems[ACTIVE_INDEX, 2] = 0;
+            shopItems[ACTIVE_INDEX, 3] = 0;
+            shopItems[ACTIVE_INDEX, 4] = 0;
+            shopItems[ACTIVE_INDEX, 5] = 0;
+            shopItems[ACTIVE_INDEX, 6] = 0;
+            shopItems[ACTIVE_INDEX, 7] = 0;
+            shopItems[ACTIVE_INDEX, 8] = 0;
+            shopItems[ACTIVE_INDEX, 9] = 0;
+            shopItems[ACTIVE_INDEX, 10] = 0;
 
             //default ball
-            shopItems[4, 11] = 1;
+            shopItems[ACTIVE_INDEX, 11] = 1;
         }
 
 
         //default ball has been bought
-        shopItems[3, 11] = 1;
-        PlayerPrefs.SetInt("ball11", shopItems[3, 11]);
+        shopItems[PUCHASED_INDEX, 11] = 1;
+        PlayerPrefs.SetInt("ball11", shopItems[PUCHASED_INDEX, 11]);
 
-        //items bought? default 0 = not bought
-        shopItems[3, 1] = PlayerPrefs.GetInt("ball1");
-        shopItems[3, 2] = PlayerPrefs.GetInt("ball2");
-        shopItems[3, 3] = PlayerPrefs.GetInt("ball3");
-        shopItems[3, 4] = PlayerPrefs.GetInt("ball4");
-        shopItems[3, 5] = PlayerPrefs.GetInt("ball5");
-        shopItems[3, 6] = PlayerPrefs.GetInt("ball6");
-        shopItems[3, 7] = PlayerPrefs.GetInt("ball7");
-        shopItems[3, 8] = PlayerPrefs.GetInt("ball8");
-        shopItems[3, 9] = PlayerPrefs.GetInt("ball9");
-        shopItems[3, 10] = PlayerPrefs.GetInt("ball10");
-
+        LoadFromPlayerPrefs();
     }
 
     public void BuyWithCoins(GameObject ButtonRef)
     {
         coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
-        if (coins >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().itemID])
+        int buttonBallSkinID = ButtonRef.GetComponent<ButtonInfo>().itemID;
+        if (coins >= shopItems[PRICE_INDEX, buttonBallSkinID])
         {
-            coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().itemID];
+            coins -= shopItems[PRICE_INDEX, buttonBallSkinID];
             ButtonRef.GetComponent<Button>().interactable = false;
-            coinsTxt.GetComponent<CoinCount>().SubtractCoins(shopItems[2, ButtonRef.GetComponent<ButtonInfo>().itemID]);
+            coinsTxt.GetComponent<CoinCount>().SubtractCoins(shopItems[PRICE_INDEX, buttonBallSkinID]);
             GetComponent<AudioSource>().Play();
-            shopItems[3, ButtonRef.GetComponent<ButtonInfo>().itemID] = 1;
-
-            //save
-            PlayerPrefs.SetInt("ball1", shopItems[3,1]);
-            PlayerPrefs.SetInt("ball2", shopItems[3,2]);
-            PlayerPrefs.SetInt("ball3", shopItems[3,3]);
-            PlayerPrefs.SetInt("ball4", shopItems[3,4]);
-            PlayerPrefs.SetInt("ball5", shopItems[3,5]);
-            PlayerPrefs.SetInt("ball6", shopItems[3,6]);
-            PlayerPrefs.SetInt("ball7", shopItems[3,7]);
-            PlayerPrefs.SetInt("ball8", shopItems[3,8]);
-            PlayerPrefs.SetInt("ball9", shopItems[3,9]);
-            PlayerPrefs.SetInt("ball10", shopItems[3,10]);
-            PlayerPrefs.SetInt("ball11", shopItems[3,11]);
+            UnlockItem(buttonBallSkinID);
         }
     }
 
-    public void BuyWithRank(int ID)
+    public void UnlockItem(int ID)
     {
-        int rank = coinsTxt.GetComponent<Statistics>().rank;
-
-            shopItems[3, ID] = 1;
-
-        //save
-        PlayerPrefs.SetInt("ball1", shopItems[3, 1]);
-        PlayerPrefs.SetInt("ball2", shopItems[3, 2]);
-        PlayerPrefs.SetInt("ball3", shopItems[3, 3]);
-        PlayerPrefs.SetInt("ball4", shopItems[3, 4]);
-        PlayerPrefs.SetInt("ball5", shopItems[3, 5]);
-        PlayerPrefs.SetInt("ball6", shopItems[3, 6]);
-        PlayerPrefs.SetInt("ball7", shopItems[3, 8]);
-        PlayerPrefs.SetInt("ball8", shopItems[3, 9]);
-        PlayerPrefs.SetInt("ball9", shopItems[3, 0]);
-        PlayerPrefs.SetInt("ball10", shopItems[3, 10]);
-        PlayerPrefs.SetInt("ball11", shopItems[3, 11]);
+        shopItems[PUCHASED_INDEX, ID] = 1;
+        SaveToPlayerPrefs();
     }
 
-    public int GetItemAvailability(int ID)
+    public bool IsItemAvailable(int ID)
     {
-        //Debug.Log(shopItems[3, ID]);
-        return shopItems[3, ID];
+        return shopItems[PUCHASED_INDEX, ID] == 1;
     }
 
-    public int IsSelected(int ID)
+    public bool IsSelected(int ID)
     {
-        //Debug.Log(shopItems[3, ID]);
-        return shopItems[4, ID];
+        return shopItems[ACTIVE_INDEX, ID] == 1;
     }
 
     public int GetPrice(int ID)
     {
-        //Debug.Log(shopItems[3, ID]);
-        return shopItems[2, ID];
+        return shopItems[PRICE_INDEX, ID];
     }
 
     public void SetActive(GameObject ButtonRef)
     {
-        if (shopItems[3, ButtonRef.GetComponent<ButtonInfoSetup>().itemID] == 1)
+        int ballSkinID = ButtonRef.GetComponent<ButtonInfoSetup>().itemID;
+        if (IsItemAvailable(ballSkinID))
         {
-            shopItems[4, 1] = 0;
-            shopItems[4, 2] = 0;
-            shopItems[4, 3] = 0;
-            shopItems[4, 4] = 0;
-            shopItems[4, 5] = 0;
-            shopItems[4, 6] = 0;
-            shopItems[4, 7] = 0;
-            shopItems[4, 8] = 0;
-            shopItems[4, 9] = 0;
-            shopItems[4, 10] = 0;
-            shopItems[4, 11] = 0;
-
-            shopItems[4, ButtonRef.GetComponent<ButtonInfoSetup>().itemID] = 1;
+            for (int ID = 0; ID < ITEM_COUNT; ++ID)
+            {
+                shopItems[ACTIVE_INDEX, ID] = 0;
+            }
+            shopItems[ACTIVE_INDEX, ballSkinID] = 1;
         }
+    }
+
+    public int GetSelectedBallID()
+    {
+        for (int ID = 0; ID < ITEM_COUNT; ++ID)
+        {
+            if (IsSelected(ID))
+            {
+                return ID;
+            }
+        }
+        return 0;
+    }
+
+    private void SaveToPlayerPrefs()
+    {
+        PlayerPrefs.SetInt("ball1", shopItems[PUCHASED_INDEX, 1]);
+        PlayerPrefs.SetInt("ball2", shopItems[PUCHASED_INDEX, 2]);
+        PlayerPrefs.SetInt("ball3", shopItems[PUCHASED_INDEX, 3]);
+        PlayerPrefs.SetInt("ball4", shopItems[PUCHASED_INDEX, 4]);
+        PlayerPrefs.SetInt("ball5", shopItems[PUCHASED_INDEX, 5]);
+        PlayerPrefs.SetInt("ball6", shopItems[PUCHASED_INDEX, 6]);
+        PlayerPrefs.SetInt("ball7", shopItems[PUCHASED_INDEX, 7]);
+        PlayerPrefs.SetInt("ball8", shopItems[PUCHASED_INDEX, 8]);
+        PlayerPrefs.SetInt("ball9", shopItems[PUCHASED_INDEX, 9]);
+        PlayerPrefs.SetInt("ball10", shopItems[PUCHASED_INDEX, 10]);
+        PlayerPrefs.SetInt("ball11", shopItems[PUCHASED_INDEX, 11]);
+    }
+
+    private void LoadFromPlayerPrefs()
+    {
+        shopItems[PUCHASED_INDEX, 1] = PlayerPrefs.GetInt("ball1");
+        shopItems[PUCHASED_INDEX, 2] = PlayerPrefs.GetInt("ball2");
+        shopItems[PUCHASED_INDEX, 3] = PlayerPrefs.GetInt("ball3");
+        shopItems[PUCHASED_INDEX, 4] = PlayerPrefs.GetInt("ball4");
+        shopItems[PUCHASED_INDEX, 5] = PlayerPrefs.GetInt("ball5");
+        shopItems[PUCHASED_INDEX, 6] = PlayerPrefs.GetInt("ball6");
+        shopItems[PUCHASED_INDEX, 7] = PlayerPrefs.GetInt("ball7");
+        shopItems[PUCHASED_INDEX, 8] = PlayerPrefs.GetInt("ball8");
+        shopItems[PUCHASED_INDEX, 9] = PlayerPrefs.GetInt("ball9");
+        shopItems[PUCHASED_INDEX, 10] = PlayerPrefs.GetInt("ball10");
     }
 }

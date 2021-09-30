@@ -8,7 +8,13 @@ public class ShopManagerScriptLocations : MonoBehaviour
 {
     private const int ITEM_COUNT = 7;
 
-    public static int[,] shopItems = new int[5, ITEM_COUNT];
+    private const int ID_INDEX = 0;
+    private const int PRICE_INDEX = 1;
+    private const int PUCHASED_INDEX = 2;
+    private const int ACTIVE_INDEX = 3;
+    private const int SHOP_ITEM_ROWS = 4;
+
+    public static int[,] shopItems = new int[SHOP_ITEM_ROWS, ITEM_COUNT];
     public int coins;
     public Text coinsTxt;
 
@@ -16,11 +22,6 @@ public class ShopManagerScriptLocations : MonoBehaviour
     private Color[] skyColors = new Color[ITEM_COUNT];
 
     private static int firstLoad = 0;
-
-    private const int ID_INDEX = 1;
-    private const int PRICE_INDEX = 2;
-    private const int PUCHASED_INDEX = 3;
-    private const int ACTIVE_INDEX = 4;
 
     void Awake()
     {
@@ -80,14 +81,7 @@ public class ShopManagerScriptLocations : MonoBehaviour
         shopItems[PUCHASED_INDEX, 6] = 1;
         PlayerPrefs.SetInt("background6", shopItems[PUCHASED_INDEX, 6]);
 
-
-        //items bought? default 0 = not bought
-        shopItems[PUCHASED_INDEX, 1] = PlayerPrefs.GetInt("background1");
-        shopItems[PUCHASED_INDEX, 2] = PlayerPrefs.GetInt("background2");
-        shopItems[PUCHASED_INDEX, 3] = PlayerPrefs.GetInt("background3");
-        shopItems[PUCHASED_INDEX, 4] = PlayerPrefs.GetInt("background4");
-        shopItems[PUCHASED_INDEX, 5] = PlayerPrefs.GetInt("background5");
-        shopItems[PUCHASED_INDEX, 6] = PlayerPrefs.GetInt("background6");
+        LoadFromPlayerPrefs();
     }
 
     public void BuyWithCoins(GameObject ButtonRef)
@@ -100,22 +94,14 @@ public class ShopManagerScriptLocations : MonoBehaviour
             ButtonRef.GetComponent<Button>().interactable = false;
             coinsTxt.GetComponent<CoinCount>().SubtractCoins(shopItems[PRICE_INDEX, buttonLocationID]);
             GetComponent<AudioSource>().Play();
-            shopItems[PUCHASED_INDEX, buttonLocationID] = 1;
-
-            SaveToPlayerPrefs();
+            UnlockItem(buttonLocationID);
         }
     }
 
-    public void BuyWithRank(GameObject ButtonRef)
+    public void UnlockItem(int ID)
     {
-        int rank = coinsTxt.GetComponent<Statistics>().rank;
-        if (rank >= ButtonRef.GetComponent<ButtonInfoLocations>().requiredRank)
-        {
-            shopItems[PUCHASED_INDEX, ButtonRef.GetComponent<ButtonInfoLocations>().itemID] = 1;
-            ButtonRef.GetComponent<Button>().interactable = false;
-
-            SaveToPlayerPrefs();
-        }
+        shopItems[PUCHASED_INDEX, ID] = 1;
+        SaveToPlayerPrefs();
     }
 
     public bool IsItemAvailable(int ID)
@@ -186,5 +172,15 @@ public class ShopManagerScriptLocations : MonoBehaviour
         PlayerPrefs.SetInt("background4", shopItems[PUCHASED_INDEX, 4]);
         PlayerPrefs.SetInt("background5", shopItems[PUCHASED_INDEX, 5]);
         PlayerPrefs.SetInt("background6", shopItems[PUCHASED_INDEX, 6]);
+    }
+
+    private void LoadFromPlayerPrefs()
+    {
+        shopItems[PUCHASED_INDEX, 1] = PlayerPrefs.GetInt("background1");
+        shopItems[PUCHASED_INDEX, 2] = PlayerPrefs.GetInt("background2");
+        shopItems[PUCHASED_INDEX, 3] = PlayerPrefs.GetInt("background3");
+        shopItems[PUCHASED_INDEX, 4] = PlayerPrefs.GetInt("background4");
+        shopItems[PUCHASED_INDEX, 5] = PlayerPrefs.GetInt("background5");
+        shopItems[PUCHASED_INDEX, 6] = PlayerPrefs.GetInt("background6");
     }
 }
