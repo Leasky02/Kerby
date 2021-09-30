@@ -59,7 +59,7 @@ public class ShopManagerScriptMiniGames : MonoBehaviour
     public void BuyWithCoins(GameObject ButtonRef)
     {
         coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
-        int buttonMiniGameID = ButtonRef.GetComponent<ButtonInfo>().itemID;
+        int buttonMiniGameID = ButtonRef.GetComponent<ButtonInfoMiniGames>().itemID;
         if (coins >= shopItems[PRICE_INDEX, buttonMiniGameID])
         {
             coins -= shopItems[PRICE_INDEX, buttonMiniGameID];
