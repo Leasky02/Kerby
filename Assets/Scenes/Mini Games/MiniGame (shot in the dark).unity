@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55826536}
   - component: {fileID: 55826537}
+  - component: {fileID: 55826538}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -315,6 +316,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &55826538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55826535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349512acb880fa24aba705db9624fc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundSpriteRenderer: {fileID: 55826537}
+  skyGameObject: {fileID: 1827595184}
+  useLocationBackgrounds: 0
 --- !u!1 &66447843
 GameObject:
   m_ObjectHideFlags: 0

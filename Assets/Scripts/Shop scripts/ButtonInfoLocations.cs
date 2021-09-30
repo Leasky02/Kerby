@@ -16,7 +16,7 @@ public class ButtonInfoLocations : MonoBehaviour
     {
         rank = GetComponent<Statistics>().rank;
         var newColorBlock = GetComponent<Button>().colors;
-        if (shopManager.GetComponent<ShopManagerScriptLocations>().GetItemAvailability(itemID) == 1)
+        if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
         {
             newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
             GetComponent<Button>().colors = newColorBlock;
@@ -25,7 +25,7 @@ public class ButtonInfoLocations : MonoBehaviour
         }
         else if (rank < requiredRank || coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScriptLocations>().GetPrice(itemID))
         {
-            if (shopManager.GetComponent<ShopManagerScriptLocations>().GetItemAvailability(itemID) == 0)
+            if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
             {
                 newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
                 GetComponent<Button>().colors = newColorBlock;
@@ -40,7 +40,7 @@ public class ButtonInfoLocations : MonoBehaviour
 
         if (coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScriptLocations>().GetPrice(itemID))
         {
-            if (shopManager.GetComponent<ShopManagerScriptLocations>().GetItemAvailability(itemID) == 0)
+            if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
             {
                 newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
                 GetComponent<Button>().colors = newColorBlock;

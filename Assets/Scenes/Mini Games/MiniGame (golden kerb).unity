@@ -2562,16 +2562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349512acb880fa24aba705db9624fc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSprites:
-  - {fileID: 0}
-  - {fileID: 21300000, guid: c730af7725a4ff246801f00158079a5b, type: 3}
-  - {fileID: 21300000, guid: 67c2985a69416494582bee42b4b71db5, type: 3}
-  - {fileID: 21300000, guid: 7dfbe9f36c240b44993f5c64b557a506, type: 3}
-  - {fileID: 21300000, guid: ff1fc923205f31541acb6e876fd1df5a, type: 3}
-  - {fileID: 21300000, guid: 053d99c57aff7554d89e64e917e444d5, type: 3}
-  - {fileID: 21300000, guid: 2488582c32f1da044b9fcacc64af4099, type: 3}
-  mySpriteRenderer: {fileID: 753562665}
-  skyColor: {fileID: 1019025968}
+  backgroundSpriteRenderer: {fileID: 753562665}
+  skyGameObject: {fileID: 1019025968}
 --- !u!114 &753562667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,6 +2576,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c67df2a2ce03be44b00fad979703c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   coins: 0
   coinsTxt: {fileID: 445033206}
 --- !u!1 &827388040
