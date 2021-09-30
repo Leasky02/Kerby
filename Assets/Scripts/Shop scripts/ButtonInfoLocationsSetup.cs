@@ -12,10 +12,10 @@ public class ButtonInfoLocationsSetup : MonoBehaviour
     {
         var newColorBlock = GetComponent<Button>().colors;
         //has it been bought?
-        if (shopManager.GetComponent<ShopManagerScriptLocations>().GetItemAvailability(itemID) == 1)
+        if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
         {
             //if so, has it been selected?
-            if (shopManager.GetComponent<ShopManagerScriptLocations>().IsSelected(itemID) == 1)
+            if (shopManager.GetComponent<ShopManagerScriptLocations>().IsSelected(itemID))
             {
                 //turns grey
                 newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
@@ -30,7 +30,7 @@ public class ButtonInfoLocationsSetup : MonoBehaviour
             }
         }
         //if it hasnt been bought...
-        else if (shopManager.GetComponent<ShopManagerScriptLocations>().GetItemAvailability(itemID) == 0)
+        else if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
         {
             //turns red
             newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
@@ -42,10 +42,10 @@ public class ButtonInfoLocationsSetup : MonoBehaviour
     {
         var newColorBlock = GetComponent<Button>().colors;
         //has it been bought?
-        if (shopManager.GetComponent<ShopManagerScriptLocations>().GetItemAvailability(itemID) == 1)
+        if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
         {
             //if so, has it been selected?
-            if (shopManager.GetComponent<ShopManagerScriptLocations>().IsSelected(itemID) == 1)
+            if (shopManager.GetComponent<ShopManagerScriptLocations>().IsSelected(itemID))
             {
                 //turns grey
                 newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
@@ -61,7 +61,7 @@ public class ButtonInfoLocationsSetup : MonoBehaviour
             }
         }
         //if it hasnt been bought...
-        else if (shopManager.GetComponent<ShopManagerScriptLocations>().GetItemAvailability(itemID) == 0)
+        else if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
         {
             //turns red
             newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);

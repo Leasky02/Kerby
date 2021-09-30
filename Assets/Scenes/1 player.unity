@@ -601,7 +601,7 @@ RectTransform:
   - {fileID: 804966323}
   - {fileID: 467625739}
   m_Father: {fileID: 822824000}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1443,8 +1443,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757892570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.9264905, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: 0, y: -2.4786577, z: 9.954994}
+  m_LocalScale: {x: 0.8000001, y: 0.8000001, z: 1.0005}
   m_Children:
   - {fileID: 1729190108}
   - {fileID: 968251730}
@@ -1456,8 +1456,8 @@ Transform:
   - {fileID: 1510798186}
   - {fileID: 652640619}
   - {fileID: 685113459}
-  m_Father: {fileID: 1748395576}
-  m_RootOrder: 0
+  m_Father: {fileID: 822824000}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760336675
 GameObject:
@@ -1948,6 +1948,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1748395576}
+  - {fileID: 757892571}
   - {fileID: 344822183}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2745,6 +2746,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 1
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 1
   Player2Game: 0
   miniGame: 0
@@ -13418,9 +13424,8 @@ RectTransform:
   m_GameObject: {fileID: 1748395575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 9.954994}
-  m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1.0005}
-  m_Children:
-  - {fileID: 757892571}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
   m_Father: {fileID: 822824000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13491,16 +13496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349512acb880fa24aba705db9624fc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSprites:
-  - {fileID: 0}
-  - {fileID: 21300000, guid: c730af7725a4ff246801f00158079a5b, type: 3}
-  - {fileID: 21300000, guid: 67c2985a69416494582bee42b4b71db5, type: 3}
-  - {fileID: 21300000, guid: 7dfbe9f36c240b44993f5c64b557a506, type: 3}
-  - {fileID: 21300000, guid: ff1fc923205f31541acb6e876fd1df5a, type: 3}
-  - {fileID: 21300000, guid: 053d99c57aff7554d89e64e917e444d5, type: 3}
-  - {fileID: 21300000, guid: 2488582c32f1da044b9fcacc64af4099, type: 3}
-  mySpriteRenderer: {fileID: 1748395577}
-  skyColor: {fileID: 1975233787}
+  backgroundSpriteRenderer: {fileID: 1748395577}
+  skyGameObject: {fileID: 1975233787}
 --- !u!114 &1748395579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13513,6 +13510,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c67df2a2ce03be44b00fad979703c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   coins: 0
   coinsTxt: {fileID: 904997585}
 --- !u!1 &1759419164
