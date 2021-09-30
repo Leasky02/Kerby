@@ -1688,7 +1688,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Arabian Desert
+  m_Text: Desert
 --- !u!222 &456385495
 CanvasRenderer:
   m_ObjectHideFlags: 0
