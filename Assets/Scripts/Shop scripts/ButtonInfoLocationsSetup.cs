@@ -10,35 +10,15 @@ public class ButtonInfoLocationsSetup : MonoBehaviour
 
     private void Start()
     {
-        var newColorBlock = GetComponent<Button>().colors;
-        //has it been bought?
-        if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
-        {
-            //if so, has it been selected?
-            if (shopManager.GetComponent<ShopManagerScriptLocations>().IsSelected(itemID))
-            {
-                //turns grey
-                newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
-                GetComponent<Button>().colors = newColorBlock;
-                GetComponent<Button>().interactable = false;
-                GetComponentInChildren<Text>().text = ("Selected");
-            }
-            else
-            {
-                //if not then its available
-                GetComponent<Button>().interactable = true;
-            }
-        }
-        //if it hasnt been bought...
-        else if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
-        {
-            //turns red
-            newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-            GetComponent<Button>().colors = newColorBlock;
-            GetComponent<Button>().interactable = false;
-        }
+        UpdateButtonTextAndColor();
     }
-    void Update()
+
+    private void Update()
+    {
+        UpdateButtonTextAndColor();
+    }
+
+    private void UpdateButtonTextAndColor()
     {
         var newColorBlock = GetComponent<Button>().colors;
         //has it been bought?
@@ -61,7 +41,7 @@ public class ButtonInfoLocationsSetup : MonoBehaviour
             }
         }
         //if it hasnt been bought...
-        else if (shopManager.GetComponent<ShopManagerScriptLocations>().IsItemAvailable(itemID))
+        else
         {
             //turns red
             newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);

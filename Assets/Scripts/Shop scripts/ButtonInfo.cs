@@ -27,29 +27,14 @@ public class ButtonInfo : MonoBehaviour
         }
         else if (rank < requiredRank || coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScript>().GetPrice(itemID))
         {
-            if (shopManager.GetComponent<ShopManagerScript>().IsItemAvailable(itemID) == false)
-            {
-                newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-                GetComponent<Button>().colors = newColorBlock;
-                GetComponent<Button>().interactable = false;
-                GetComponentInChildren<Text>().text = ("Locked");
-            }
+            newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
+            GetComponent<Button>().colors = newColorBlock;
+            GetComponent<Button>().interactable = false;
+            GetComponentInChildren<Text>().text = ("Locked");
         }
         else
         {
             GetComponent<Button>().interactable = true;
-        }
-
-        if (coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScript>().GetPrice(itemID))
-        {
-            if (shopManager.GetComponent<ShopManagerScript>().IsItemAvailable(itemID) == false)
-            {
-                //red
-                newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-                GetComponent<Button>().colors = newColorBlock;
-                GetComponent<Button>().interactable = false;
-                GetComponentInChildren<Text>().text = ("Locked");
-            }
         }
     }
 }

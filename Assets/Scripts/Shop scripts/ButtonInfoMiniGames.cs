@@ -26,27 +26,14 @@ public class ButtonInfoMiniGames : MonoBehaviour
         }
         else if (rank < requiredRank || coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScriptMiniGames>().GetPrice(itemID))
         {
-            if (shopManager.GetComponent<ShopManagerScriptMiniGames>().IsItemAvailable(itemID) == false)
-            {
-                newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-                GetComponent<Button>().colors = newColorBlock;
-                GetComponent<Button>().interactable = false;
-            }
+            newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
+            GetComponent<Button>().colors = newColorBlock;
+            GetComponent<Button>().interactable = false;
+            GetComponentInChildren<Text>().text = ("Locked");
         }
         else
         {
             GetComponent<Button>().interactable = true;
-        }
-
-        if (coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScriptMiniGames>().GetPrice(itemID))
-        {
-            if (shopManager.GetComponent<ShopManagerScriptMiniGames>().IsItemAvailable(itemID) == false)
-            {
-                newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-                GetComponent<Button>().colors = newColorBlock;
-                GetComponent<Button>().interactable = false;
-                GetComponentInChildren<Text>().text = ("Locked");
-            }
         }
     }
 }
