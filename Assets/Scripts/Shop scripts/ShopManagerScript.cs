@@ -63,7 +63,7 @@ public class ShopManagerScript : MonoBehaviour
         bounceAudioClips[RUBBER_BOUNCE] = Resources.Load<AudioClip>("Audio/Ball Bounce/BasketballBounce");
         bounceAudioClips[STONE_BOUNCE] = Resources.Load<AudioClip>("Audio/Ball Bounce/StoneBounce");
         bounceAudioClips[SLUDGE_BOUNCE] = Resources.Load<AudioClip>("Audio/Ball Bounce/FoodBounce");
-        bounceAudioClips[MONEY_BOUNCE] = Resources.Load<AudioClip>("Audio/Ball Bounce/MoneyBounce");
+        bounceAudioClips[MONEY_BOUNCE] = Resources.Load<AudioClip>("Audio/Ball Bounce/CoinBounce");
 
         ballToAudioClips[0] = RUBBER_BOUNCE;    // orange ball (default)
         ballToAudioClips[1] = RUBBER_BOUNCE;    // blue ball
