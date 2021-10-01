@@ -6206,7 +6206,7 @@ SpriteRenderer:
   m_Size: {x: 17.777779, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &301767116
@@ -6221,14 +6221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c67df2a2ce03be44b00fad979703c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   coins: 0
   coinsTxt: {fileID: 1628807553}
 --- !u!114 &301767117
@@ -6245,6 +6237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSpriteRenderer: {fileID: 301767115}
   skyGameObject: {fileID: 1247866355}
+  useLocationBackgrounds: 1
 --- !u!1 &374914537
 GameObject:
   m_ObjectHideFlags: 0
@@ -28889,7 +28882,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: b13e9ceb7b514ac4ebb376ca477fe93c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ead33c8e466654c8999be8d94c29c8d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -29311,26 +29304,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe06713acbd70d41acb3401bda15f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSprites:
-  - {fileID: 0}
-  - {fileID: 21300000, guid: a721e91dabf8f4a4da2b4e4a274e67e7, type: 3}
-  - {fileID: 21300000, guid: 7e89202449eb5ac4f91447dcd24dd894, type: 3}
-  - {fileID: 21300000, guid: 4a85dbf4f8647f14ab09020123428074, type: 3}
-  - {fileID: 21300000, guid: 3df7e2057ea22314ea8fbe38dc999a10, type: 3}
-  - {fileID: 21300000, guid: dc0fed46c167bc64ebef0fddf0203187, type: 3}
-  - {fileID: 21300000, guid: 5b6b429cd788d404ba1f9fd7def11fb3, type: 3}
-  - {fileID: 21300000, guid: 3c3c5c39a9bef0e4993462f8b858bf3d, type: 3}
-  - {fileID: 21300000, guid: 3370a775c0651df45afa2f211c88267c, type: 3}
-  - {fileID: 21300000, guid: 0b875e68581041e47855dd2d0bb04bb1, type: 3}
-  - {fileID: 21300000, guid: 967d9e5935bbf1448ab161ba20b3d37a, type: 3}
-  - {fileID: 21300000, guid: b13e9ceb7b514ac4ebb376ca477fe93c, type: 3}
-  mySpriteRenderer: {fileID: 1954725379}
+  ballSpriteRenderer: {fileID: 1954725379}
   missParticles: {fileID: 715021180}
   ballCollisions: {fileID: 1954725385}
-  rubberBounce: {fileID: 8300000, guid: 91376f7c380d6e447a0c1bc8c24f11f3, type: 3}
-  stoneBounce: {fileID: 8300000, guid: 0adaf29a8c771814895b48dffba8e530, type: 3}
-  sludgeBounce: {fileID: 8300000, guid: 2f81fcfc117b52944b68951d61d9cf8f, type: 3}
-  moneyBounce: {fileID: 8300000, guid: ff2aaac82b1ed2f499ec6ac1dc303aa2, type: 3}
 --- !u!1 &1970784765
 GameObject:
   m_ObjectHideFlags: 0

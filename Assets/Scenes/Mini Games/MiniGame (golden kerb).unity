@@ -1866,7 +1866,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 91376f7c380d6e447a0c1bc8c24f11f3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fe2b49d8539b14a7f92f72a1296e87b9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   coinDisplay: {fileID: 445033205}
   streak: 0
   missParticles: {fileID: 1119349195}
-  bounceSound: {fileID: 8300000, guid: ff2aaac82b1ed2f499ec6ac1dc303aa2, type: 3}
+  bounceSound: {fileID: 8300000, guid: c231bf7cac65e497c8c55548a59f4bcb, type: 3}
   failSound: {fileID: 8300000, guid: a87ded6389d235e4c885b69d832ab0da, type: 3}
 --- !u!114 &604218560
 MonoBehaviour:
@@ -2190,12 +2190,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -18
-  m_Sprite: {fileID: 21300000, guid: 967d9e5935bbf1448ab161ba20b3d37a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d72fb113c055d4e9caa3da2fe7b13a0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.1851852, y: 1.1851852}
+  m_Size: {x: 1.6842105, y: 1.6842105}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2547,7 +2547,7 @@ SpriteRenderer:
   m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &753562666
@@ -2564,6 +2564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSpriteRenderer: {fileID: 753562665}
   skyGameObject: {fileID: 1019025968}
+  useLocationBackgrounds: 1
 --- !u!114 &753562667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2576,14 +2577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c67df2a2ce03be44b00fad979703c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   coins: 0
   coinsTxt: {fileID: 445033206}
 --- !u!1 &827388040

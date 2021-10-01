@@ -6705,12 +6705,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -18
-  m_Sprite: {fileID: 21300000, guid: b13e9ceb7b514ac4ebb376ca477fe93c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ead33c8e466654c8999be8d94c29c8d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.1851852, y: 1.1851852}
+  m_Size: {x: 1.6, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6728,26 +6728,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d8a4974e6ad344b9803f5a3c66e913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSprites:
-  - {fileID: 0}
-  - {fileID: 21300000, guid: a721e91dabf8f4a4da2b4e4a274e67e7, type: 3}
-  - {fileID: 21300000, guid: 7e89202449eb5ac4f91447dcd24dd894, type: 3}
-  - {fileID: 21300000, guid: 4a85dbf4f8647f14ab09020123428074, type: 3}
-  - {fileID: 21300000, guid: 3df7e2057ea22314ea8fbe38dc999a10, type: 3}
-  - {fileID: 21300000, guid: dc0fed46c167bc64ebef0fddf0203187, type: 3}
-  - {fileID: 21300000, guid: 5b6b429cd788d404ba1f9fd7def11fb3, type: 3}
-  - {fileID: 21300000, guid: 3c3c5c39a9bef0e4993462f8b858bf3d, type: 3}
-  - {fileID: 21300000, guid: 3370a775c0651df45afa2f211c88267c, type: 3}
-  - {fileID: 21300000, guid: 0b875e68581041e47855dd2d0bb04bb1, type: 3}
-  - {fileID: 21300000, guid: 967d9e5935bbf1448ab161ba20b3d37a, type: 3}
-  - {fileID: 21300000, guid: b13e9ceb7b514ac4ebb376ca477fe93c, type: 3}
-  mySpriteRenderer: {fileID: 558128730}
+  ballSpriteRenderer: {fileID: 558128730}
   missParticles: {fileID: 1401160947}
   ballCollisions: {fileID: 558128725}
-  rubberBounce: {fileID: 8300000, guid: 91376f7c380d6e447a0c1bc8c24f11f3, type: 3}
-  stoneBounce: {fileID: 8300000, guid: 0adaf29a8c771814895b48dffba8e530, type: 3}
-  sludgeBounce: {fileID: 8300000, guid: 2f81fcfc117b52944b68951d61d9cf8f, type: 3}
-  moneyBounce: {fileID: 8300000, guid: ff2aaac82b1ed2f499ec6ac1dc303aa2, type: 3}
 --- !u!114 &558128732
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -142,7 +142,7 @@ public class ShopManagerScriptLocations : MonoBehaviour
         return backgroundSprites[locationID];
     }
 
-    public int GetSelectedLocationID()
+    private int GetSelectedLocationID()
     {
         for (int ID = 0; ID < ITEM_COUNT; ++ID)
         {
@@ -156,12 +156,12 @@ public class ShopManagerScriptLocations : MonoBehaviour
     
     public Color GetSkyColorForSelectedLocation()
     {
-        return skyColors[GetSelectedLocationID()];
+        return GetSkyColorForLocation(GetSelectedLocationID());
     }
 
     public Sprite GetBackgroundSpriteForSelectedLocation()
     {
-        return backgroundSprites[GetSelectedLocationID()];
+        return GetBackgroundSpriteForLocation(GetSelectedLocationID());
     }
 
     private void SaveToPlayerPrefs()
