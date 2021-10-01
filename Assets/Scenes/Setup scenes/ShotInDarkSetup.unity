@@ -351,7 +351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gifuffle
+  m_Text: ...?
 --- !u!222 &65065109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2299,12 +2299,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5b6b429cd788d404ba1f9fd7def11fb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e57ae2a258b364fb78ac404824ca89de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.6, y: 1.6}
+  m_Size: {x: 1.5058824, y: 1.5058824}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5261,7 +5261,7 @@ GameObject:
   - component: {fileID: 1591980885}
   - component: {fileID: 1591980886}
   m_Layer: 0
-  m_Name: Item 6 - gifuffle
+  m_Name: Item 6 - flumble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

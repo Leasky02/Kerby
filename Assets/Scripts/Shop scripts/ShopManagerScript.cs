@@ -40,7 +40,7 @@ public class ShopManagerScript : MonoBehaviour
         ballSprites[3] = Resources.Load<Sprite>("Sprites/Balls/BallRed");           // red ball
         ballSprites[4] = Resources.Load<Sprite>("Sprites/Balls/BallPurple");        // purple ball
         ballSprites[5] = Resources.Load<Sprite>("Sprites/Balls/BallTractorWheel");  // tractor wheel
-        ballSprites[6] = Resources.Load<Sprite>("Sprites/Balls/BallFlumble");      // flumble ball
+        ballSprites[6] = Resources.Load<Sprite>("Sprites/Balls/BallFlumbleGrey");       // flumble ball
         ballSprites[7] = Resources.Load<Sprite>("Sprites/Balls/BallDonut");         // donut
         ballSprites[8] = Resources.Load<Sprite>("Sprites/Balls/BallWatermelon");    // watermelon
         ballSprites[9] = Resources.Load<Sprite>("Sprites/Balls/BallGlobe");         // globe
@@ -53,7 +53,7 @@ public class ShopManagerScript : MonoBehaviour
         ballParticleColors[3] = new Color(1f, 0.058f, 0.058f);      // red ball
         ballParticleColors[4] = new Color(0.549f, 0.086f, 0.552f);  // purple ball
         ballParticleColors[5] = new Color(0, 0, 0);                 // tractor wheel - black color
-        ballParticleColors[6] = new Color(1, 1, 1);                 // flumble ball - white color
+        ballParticleColors[6] = new Color(0.5f, 0.5f, 0.5f);        // flumble ball - grey color
         ballParticleColors[7] = new Color(0.631f, 0.611f, 0.827f);  // donut - cream color
         ballParticleColors[8] = new Color(0.184f, 0.447f, 0.133f);  // watermelon - dark green color
         ballParticleColors[9] = new Color(0.513f, 0.807f, 0.749f);  // globe - light blue color
@@ -70,12 +70,12 @@ public class ShopManagerScript : MonoBehaviour
         ballToAudioClips[2] = RUBBER_BOUNCE;    // yellow ball
         ballToAudioClips[3] = RUBBER_BOUNCE;    // red ball
         ballToAudioClips[4] = RUBBER_BOUNCE;    // purple ball
-        ballToAudioClips[5] = RUBBER_BOUNCE;    // tractor wheel - black color
-        ballToAudioClips[6] = STONE_BOUNCE;     // flumble ball - white color
-        ballToAudioClips[7] = SLUDGE_BOUNCE;    // donut - cream color
-        ballToAudioClips[8] = SLUDGE_BOUNCE;    // watermelon - dark green color
-        ballToAudioClips[9] = STONE_BOUNCE;     // globe - light blue color
-        ballToAudioClips[10] = MONEY_BOUNCE;    // coin - gold color
+        ballToAudioClips[5] = RUBBER_BOUNCE;    // tractor wheel
+        ballToAudioClips[6] = STONE_BOUNCE;     // flumble ball
+        ballToAudioClips[7] = SLUDGE_BOUNCE;    // donut
+        ballToAudioClips[8] = SLUDGE_BOUNCE;    // watermelon
+        ballToAudioClips[9] = STONE_BOUNCE;     // globe
+        ballToAudioClips[10] = MONEY_BOUNCE;    // coin
         ballToAudioClips[11] = RUBBER_BOUNCE;   // orange ball (default)
 
         coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
