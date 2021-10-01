@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class BallSpriteRenderScript : MonoBehaviour
 {
-    public Sprite[] ballSprites;
-    public SpriteRenderer mySpriteRenderer;
-    private int[] activeSpriteID = new int[12];
+    public SpriteRenderer ballSpriteRenderer;
     public ParticleSystem missParticles;
     public BallCollisions ballCollisions;
 
     private void Start()
     {
-        int activeBallSkinID = GetComponent<ShopManagerScript>().GetSelectedBallID();
-        mySpriteRenderer.sprite = ballSprites[activeBallSkinID];
+        ballSpriteRenderer.sprite = GetComponent<ShopManagerScript>().GetBallSpriteForSelectedBall();
         var psMain = missParticles.main;
         psMain.startColor = GetComponent<ShopManagerScript>().GetBallParticleColorForSelectedBall();
         ballCollisions.bounceSound = GetComponent<ShopManagerScript>().GetBounceAudioClipForSelectedBall();

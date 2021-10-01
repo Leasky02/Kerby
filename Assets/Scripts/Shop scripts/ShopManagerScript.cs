@@ -18,7 +18,7 @@ public class ShopManagerScript : MonoBehaviour
     public int coins;
     public Text coinsTxt;
 
-    //private Sprite[] ballSprites = new Sprite[ITEM_COUNT];
+    private Sprite[] ballSprites = new Sprite[ITEM_COUNT];
     private Color[] ballParticleColors = new Color[ITEM_COUNT];
     
     private const int RUBBER_BOUNCE = 0;
@@ -34,13 +34,26 @@ public class ShopManagerScript : MonoBehaviour
 
     void Awake()
     {
+        ballSprites[0] = Resources.Load<Sprite>("Sprites/Balls/BallOrange");        // orange ball (default)
+        ballSprites[1] = Resources.Load<Sprite>("Sprites/Balls/BallBlue");          // blue ball
+        ballSprites[2] = Resources.Load<Sprite>("Sprites/Balls/BallYellow");        // yellow ball
+        ballSprites[3] = Resources.Load<Sprite>("Sprites/Balls/BallRed");           // red ball
+        ballSprites[4] = Resources.Load<Sprite>("Sprites/Balls/BallPurple");        // purple ball
+        ballSprites[5] = Resources.Load<Sprite>("Sprites/Balls/BallTractorWheel");  // tractor wheel
+        ballSprites[6] = Resources.Load<Sprite>("Sprites/Balls/BallFlumble");      // flumble ball
+        ballSprites[7] = Resources.Load<Sprite>("Sprites/Balls/BallDonut");         // donut
+        ballSprites[8] = Resources.Load<Sprite>("Sprites/Balls/BallWatermelon");    // watermelon
+        ballSprites[9] = Resources.Load<Sprite>("Sprites/Balls/BallGlobe");         // globe
+        ballSprites[10] = Resources.Load<Sprite>("Sprites/Balls/BallCoin");         // coin
+        ballSprites[11] = Resources.Load<Sprite>("Sprites/Balls/BallOrange");       // orange ball (default)
+
         ballParticleColors[0] = new Color(0.972f, 0.564f, 0f);      // orange ball (default)
         ballParticleColors[1] = new Color(0.058f, 0.101f, 0.960f);  // blue ball
         ballParticleColors[2] = new Color(0.941f, 0.984f, 0.035f);  // yellow ball
         ballParticleColors[3] = new Color(1f, 0.058f, 0.058f);      // red ball
         ballParticleColors[4] = new Color(0.549f, 0.086f, 0.552f);  // purple ball
         ballParticleColors[5] = new Color(0, 0, 0);                 // tractor wheel - black color
-        ballParticleColors[6] = new Color(1, 1, 1);                 // gifuffle ball - white color
+        ballParticleColors[6] = new Color(1, 1, 1);                 // flumble ball - white color
         ballParticleColors[7] = new Color(0.631f, 0.611f, 0.827f);  // donut - cream color
         ballParticleColors[8] = new Color(0.184f, 0.447f, 0.133f);  // watermelon - dark green color
         ballParticleColors[9] = new Color(0.513f, 0.807f, 0.749f);  // globe - light blue color
@@ -58,7 +71,7 @@ public class ShopManagerScript : MonoBehaviour
         ballToAudioClips[3] = RUBBER_BOUNCE;    // red ball
         ballToAudioClips[4] = RUBBER_BOUNCE;    // purple ball
         ballToAudioClips[5] = RUBBER_BOUNCE;    // tractor wheel - black color
-        ballToAudioClips[6] = STONE_BOUNCE;     // gifuffle ball - white color
+        ballToAudioClips[6] = STONE_BOUNCE;     // flumble ball - white color
         ballToAudioClips[7] = SLUDGE_BOUNCE;    // donut - cream color
         ballToAudioClips[8] = SLUDGE_BOUNCE;    // watermelon - dark green color
         ballToAudioClips[9] = STONE_BOUNCE;     // globe - light blue color
@@ -181,7 +194,12 @@ public class ShopManagerScript : MonoBehaviour
         return bounceAudioClips[ballToAudioClips[ballID]];
     }
 
-    public int GetSelectedBallID()
+    private Sprite GetBallSpriteForBall(int ballID)
+    {
+        return ballSprites[ballID];
+    }
+
+    private int GetSelectedBallID()
     {
         for (int ID = 0; ID < ITEM_COUNT; ++ID)
         {
@@ -201,6 +219,11 @@ public class ShopManagerScript : MonoBehaviour
     public AudioClip GetBounceAudioClipForSelectedBall()
     {
         return GetBounceAudioClipForBall(GetSelectedBallID());
+    }
+
+    public Sprite GetBallSpriteForSelectedBall()
+    {
+        return GetBallSpriteForBall(GetSelectedBallID());
     }
 
     private void SaveToPlayerPrefs()
