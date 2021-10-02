@@ -18,12 +18,7 @@ public class ShopItemComponent : MonoBehaviour
     [SerializeField]
     private Button buyButton;
 
-    private string shopItemKey;
-
-    void Start()
-    {
-        shopItemKey = null;
-    }
+    private string shopItemKey = null;
 
     public void AssignShopItemKey(string key)
     {
