@@ -6,13 +6,15 @@ public class ShopItem
     public string key;
     public int price;
     public string description;
+    public Sprite image;
 
-    public ShopItem(string _name, string _key, int _price, string _description)
+    public ShopItem(string _name, string _key, int _price, string _description, string imagePath)
     {
         name = _name;
         key = _key;
         price = _price;
         description = _description;
+        image = Resources.Load<Sprite>(imagePath);
     }
 
     public static ShopItem CreateFromJSON(string jsonString)

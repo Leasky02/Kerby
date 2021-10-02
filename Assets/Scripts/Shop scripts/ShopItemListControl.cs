@@ -19,6 +19,7 @@ public class ShopItemListControl : MonoBehaviour
             shopItem.GetComponent<ShopItemComponent>().SetTitle(item.name);
             shopItem.GetComponent<ShopItemComponent>().SetPrice(item.price);
             shopItem.GetComponent<ShopItemComponent>().SetDescription(item.description);
+            shopItem.GetComponent<ShopItemComponent>().SetImage(item.image);
 
             shopItem.transform.SetParent(shopItemTemplate.transform.parent, false);
 

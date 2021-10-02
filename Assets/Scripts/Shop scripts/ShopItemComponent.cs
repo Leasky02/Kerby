@@ -18,6 +18,9 @@ public class ShopItemComponent : MonoBehaviour
     [SerializeField]
     private Button buyButton;
 
+    [SerializeField]
+    private SpriteRenderer imageSpriteRenderer;
+
     private string shopItemKey = null;
 
     public void AssignShopItemKey(string key)
@@ -74,8 +77,8 @@ public class ShopItemComponent : MonoBehaviour
         descriptionText.text = descriptionString;
     }
 
-    public void SetImage()
+    public void SetImage(Sprite image)
     {
-
+        imageSpriteRenderer.sprite = image;
     }
 }

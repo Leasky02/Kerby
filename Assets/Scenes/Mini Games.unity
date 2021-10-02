@@ -641,7 +641,10 @@ MonoBehaviour:
   totalPointsDisplay: {fileID: 0}
   accuracyDisplay: {fileID: 0}
   highestStreakDisplay: {fileID: 0}
+  highestStreakDisplayShotInTheDark: {fileID: 0}
+  highestStreakDisplayMarsMission: {fileID: 0}
   gamesPlayedDisplay: {fileID: 0}
+  doubleKerbDisplay: {fileID: 0}
   rankDisplay: {fileID: 0}
   rankIconDisplay: {fileID: 0}
   RankPauseScreen: {fileID: 0}
@@ -654,6 +657,11 @@ MonoBehaviour:
   currentRankIcon: 0
   showStats: 0
   showRank: 0
+  attemptBallUnlock5: 0
+  attemptBallUnlock10: 0
+  attemptBallUnlock15: 0
+  attemptBallUnlock20: 0
+  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -672,6 +680,12 @@ MonoBehaviour:
   ps: {fileID: 0}
   jackpotTotal: 0
   displayCoins: 0
+  AdsManager: {fileID: 0}
+  currentStreak: {fileID: 0}
+  claimButton: {fileID: 0}
+  Ball: {fileID: 0}
+  jackpotAudio: {fileID: 0}
+  inGame: 0
 --- !u!82 &245787504
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2451,7 +2465,7 @@ Transform:
   m_GameObject: {fileID: 1735078865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0012999357, y: 0.062, z: 0.000010858598}
-  m_LocalScale: {x: 0.1, y: 0.08, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.04, z: 1}
   m_Children: []
   m_Father: {fileID: 746083709}
   m_RootOrder: 0
@@ -2613,7 +2627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0ec3189b3708545a79effa71ba4e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
   coinsTxt: {fileID: 245787505}
 --- !u!224 &1836246789
 RectTransform:
