@@ -13,6 +13,9 @@ public class ShopItemListControl : MonoBehaviour
     {
         List<ShopItem> shopItems = shopManager.GetShopItems();
         shopItems.ForEach(delegate(ShopItem item) {
+            if (item.showInShop == false)
+                return;
+
             GameObject shopItem = Instantiate(shopItemTemplate) as GameObject;
             
             shopItem.GetComponent<ShopItemComponent>().AssignShopItemKey(item.key);
