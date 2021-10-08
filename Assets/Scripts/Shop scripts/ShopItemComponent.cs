@@ -74,7 +74,8 @@ public class ShopItemComponent : MonoBehaviour
 
     public void SetDescription(string descriptionString)
     {
-        descriptionText.text = descriptionString;
+        if (descriptionText && descriptionString.Length > 0)
+            descriptionText.text = descriptionString;
     }
 
     public void SetImage(Sprite image)
