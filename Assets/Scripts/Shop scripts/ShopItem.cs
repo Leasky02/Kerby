@@ -7,14 +7,27 @@ public class ShopItem
     public int price;
     public string description;
     public Sprite image;
+    public bool showInShop;
 
-    public ShopItem(string _name, string _key, int _price, string _description, string imagePath)
+    private ShopItem(string _name, string _key, int _price, string _description, string imagePath, bool _showInShop)
     {
         name = _name;
         key = _key;
         price = _price;
         description = _description;
         image = Resources.Load<Sprite>(imagePath);
+        showInShop = _showInShop;
+    }
+    
+    public static ShopItem CreateLocationItem(string name, string key, int price, string imagePath, bool showInShop)
+    {
+        string description = "";
+        return new ShopItem(name, key, price, description, imagePath, showInShop);
+    }
+    
+    public static ShopItem CreateMiniGameItem(string name, string key, int price, string description, string imagePath)
+    {
+        return new ShopItem(name, key, price, description, imagePath, true);
     }
 
     public static ShopItem CreateFromJSON(string jsonString)
