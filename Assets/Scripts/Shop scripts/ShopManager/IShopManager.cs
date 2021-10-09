@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,13 +13,10 @@ public abstract class IShopManager : MonoBehaviour
     
     private static Dictionary<string, bool> shopItemsPurchasedDict = new Dictionary<string, bool>();
 
-    private static int firstLoad;
-
     private static string activeItemKey;
 
     void Awake()
     {
-        firstLoad = PlayerPrefs.GetInt("firstLoadMiniGames");
         coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
         coinsTxt.text = coins.ToString();
         activeItemKey = "";
