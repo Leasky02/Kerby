@@ -17,7 +17,7 @@ public class ButtonInfoMiniGamesSetup : MonoBehaviour
     {
         // var newColorBlock = GetComponent<Button>().colors;
         // //has it been bought?
-        // if (shopManager.GetComponent<ShopManagerScriptMiniGames>().IsItemAvailable(itemID))
+        // if (shopManager.GetComponent<ShopManagerMiniGames>().IsItemAvailable(itemID))
         // {
         //     GetComponent<Button>().interactable = true;
         // }

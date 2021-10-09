@@ -15,26 +15,26 @@ public class ButtonInfo : MonoBehaviour
 
     private void Update()
     {
-        rank = GetComponent<Statistics>().rank;
-        var newColorBlock = GetComponent<Button>().colors;
-        if (shopManager.GetComponent<ShopManagerScript>().IsItemAvailable(itemID))
-        {
-            //grey
-            newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
-            GetComponent<Button>().colors = newColorBlock;
-            GetComponent<Button>().interactable = false;
-            GetComponentInChildren<Text>().text = ("Owned");
-        }
-        else if (rank < requiredRank || coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerScript>().GetPrice(itemID))
-        {
-            newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-            GetComponent<Button>().colors = newColorBlock;
-            GetComponent<Button>().interactable = false;
-            GetComponentInChildren<Text>().text = ("Locked");
-        }
-        else
-        {
-            GetComponent<Button>().interactable = true;
-        }
+        // rank = GetComponent<Statistics>().rank;
+        // var newColorBlock = GetComponent<Button>().colors;
+        // if (shopManager.GetComponent<ShopManagerBallSkins>().IsItemAvailable(itemID))
+        // {
+        //     //grey
+        //     newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
+        //     GetComponent<Button>().colors = newColorBlock;
+        //     GetComponent<Button>().interactable = false;
+        //     GetComponentInChildren<Text>().text = ("Owned");
+        // }
+        // else if (rank < requiredRank || coins.GetComponent<CoinCount>().GetCoins() < shopManager.GetComponent<ShopManagerBallSkins>().GetPrice(itemID))
+        // {
+        //     newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
+        //     GetComponent<Button>().colors = newColorBlock;
+        //     GetComponent<Button>().interactable = false;
+        //     GetComponentInChildren<Text>().text = ("Locked");
+        // }
+        // else
+        // {
+        //     GetComponent<Button>().interactable = true;
+        // }
     }
 }
