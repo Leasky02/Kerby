@@ -15,13 +15,14 @@ public abstract class IShopManager : MonoBehaviour
 
     private static int firstLoad;
 
-    private string playerPrefsPrefix;
+    private static string activeItemKey;
 
     void Awake()
     {
         firstLoad = PlayerPrefs.GetInt("firstLoadMiniGames");
         coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
         coinsTxt.text = coins.ToString();
+        activeItemKey = "";
     }
 
     protected void AddShopItem(ShopItem item)
@@ -91,5 +92,26 @@ public abstract class IShopManager : MonoBehaviour
     private bool GetFromPlayerPrefsIsItemPurchased(string key)
     {
         return PlayerPrefs.GetInt(key) == 1;
+    }
+
+    public void SetActiveItem(string key)
+    {
+        activeItemKey = key;
+    }
+
+    protected ShopItem GetItem(string key)
+    {
+        ShopItem item;
+        return shopItemsDict.TryGetValue(key, out item) ? item : null;
+    }
+
+    public bool HasActiveItem()
+    {
+        return activeItemKey.Length > 0 && shopItemsDict.ContainsKey(activeItemKey);
+    }
+
+    public ShopItem GetActiveItem()
+    {
+        return GetItem(activeItemKey);
     }
 }

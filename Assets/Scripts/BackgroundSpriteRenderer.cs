@@ -12,8 +12,8 @@ public class BackgroundSpriteRenderer : MonoBehaviour
     {
         if (useLocationBackgrounds)
         {
-            skyGameObject.GetComponent<SpriteRenderer>().color = GetComponent<ShopManagerScriptLocations>().GetSkyColorForSelectedLocation();
-            backgroundSpriteRenderer.sprite = GetComponent<ShopManagerScriptLocations>().GetBackgroundSpriteForSelectedLocation();
+            skyGameObject.GetComponent<SpriteRenderer>().color = GetComponent<ShopManagerLocations>().GetActiveSkyColor();
+            backgroundSpriteRenderer.sprite = GetComponent<ShopManagerLocations>().GetActiveLocationSprite();
         }
         
         ResizeToFitDevice();

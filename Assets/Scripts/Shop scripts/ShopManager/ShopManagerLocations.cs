@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using UnityEngine;
 
 public class ShopManagerLocations : IShopManager
 {
@@ -8,8 +10,19 @@ public class ShopManagerLocations : IShopManager
     private const string LOCATION_ID_HIMALAYAS = "background4";
     private const string LOCATION_ID_RAINFOREST = "background5";
 
+    private const string LOCATION_ID_DEFAULT = LOCATION_ID_NEW_YORK;
+
+    private Dictionary<string, Color> skyColors;
+
     void Start()
     {
+        skyColors.Add(LOCATION_ID_NEW_YORK,     new Color(0.631f, 0.611f, 0.827f));  // New York
+        skyColors.Add(LOCATION_ID_DESERT,       new Color(0.894f, 0.447f, 0.156f));  // Desert
+        skyColors.Add(LOCATION_ID_LOCH_NESS,    new Color(0.568f, 0.866f, 0.882f));  // Loch Ness
+        skyColors.Add(LOCATION_ID_SUBURBS,      new Color(0.862f, 0.741f, 0.741f));  // Suburbs
+        skyColors.Add(LOCATION_ID_HIMALAYAS,    new Color(0.592f, 0.768f, 0.803f));  // Himalayas
+        skyColors.Add(LOCATION_ID_RAINFOREST,   new Color(0.647f, 0.878f, 0.658f));  // Rainforest
+
         AddShopItem(ShopItem.CreateLocationItem(
             "New York",
             LOCATION_ID_NEW_YORK,
@@ -52,5 +65,23 @@ public class ShopManagerLocations : IShopManager
             "Sprites/Backgrounds/Standard/Rainforest",
             true
         ));
+    }
+
+    private ShopItem GetDefaultLocation()
+    {
+        return GetItem(LOCATION_ID_DEFAULT);
+    }
+
+    public Sprite GetActiveLocationSprite()
+    {
+        return (HasActiveItem() ? GetActiveItem() : GetDefaultLocation()).image;
+    }
+
+    public Color GetActiveSkyColor()
+    {
+        ShopItem activeItem = HasActiveItem() ? GetActiveItem() : GetDefaultLocation();
+        Color skyColor;
+        skyColors.TryGetValue(activeItem.key, out skyColor);
+        return skyColor;
     }
 }
