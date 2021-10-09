@@ -8,9 +8,9 @@ public class BallSpriteRendererDoubleKerb : MonoBehaviour
 
     private void Start()
     {
-        ballSpriteRenderer.sprite = GetComponent<ShopManagerBallSkins>().GetActiveBallSkinSprite();
+        ballSpriteRenderer.sprite = GameManager.Instance.GetBallSkinsShopManager().GetActiveBallSkinSprite();
         ParticleSystem.MainModule psMain = missParticles.main;
-        psMain.startColor = GetComponent<ShopManagerBallSkins>().GetActiveBallParticleColor();
-        ballCollisions.bounceSound = GetComponent<ShopManagerBallSkins>().GetActiveBallBounceAudioClip();
+        psMain.startColor = GameManager.Instance.GetBallSkinsShopManager().GetActiveBallParticleColor();
+        ballCollisions.bounceSound = GameManager.Instance.GetBallSkinsShopManager().GetActiveBallBounceAudioClip();
     }
 }

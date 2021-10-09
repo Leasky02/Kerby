@@ -25,13 +25,13 @@ public class ShopManagerBallSkins : IShopManager
     private const string SLUDGE_BOUNCE = "sludge";
     private const string MONEY_BOUNCE = "money";
 
-    private Dictionary<string, Color> ballParticleColors;
+    private Dictionary<string, Color> ballParticleColors = new Dictionary<string, Color>();
 
-    private Dictionary<string, AudioClip> ballBounceAudioClips;
+    private Dictionary<string, AudioClip> ballBounceAudioClips = new Dictionary<string, AudioClip>();
 
-    private Dictionary<string, string> ballToAudioClipID;
+    private Dictionary<string, string> ballToAudioClipID = new Dictionary<string, string>();
 
-    void Start()
+    public ShopManagerBallSkins() : base()
     {
         ballParticleColors.Add(BALL_SKIN_ID_ORANGE,         new Color(0.972f, 0.564f, 0f));         // orange ball (default)
         ballParticleColors.Add(BALL_SKIN_ID_BLUE,           new Color(0.058f, 0.101f, 0.960f));     // blue ball

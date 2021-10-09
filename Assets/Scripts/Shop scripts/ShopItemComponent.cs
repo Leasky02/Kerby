@@ -4,9 +4,6 @@ using UnityEngine.UI;
 public class ShopItemComponent : MonoBehaviour
 {
     [SerializeField]
-    private IShopManager shopManager;
-
-    [SerializeField]
     private Text titleText;
 
     [SerializeField]
@@ -35,14 +32,14 @@ public class ShopItemComponent : MonoBehaviour
             return;
         
         ColorBlock colorBlock = buyButton.colors;
-        if (shopManager.IsItemAvailable(shopItemKey))
+        if (GameManager.Instance.IsItemOwned(shopItemKey))
         {
             colorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
             buyButton.colors = colorBlock;
             buyButton.interactable = false;
             buyButton.GetComponentInChildren<Text>().text = ("Owned");
         }
-        else if (shopManager.CanBuyWithCoins(shopItemKey) == false)
+        else if (GameManager.Instance.IsItemAvailableToBuy(shopItemKey) == false)
         {
             colorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
             buyButton.colors = colorBlock;
@@ -58,7 +55,7 @@ public class ShopItemComponent : MonoBehaviour
 
     public void OnClick()
     {
-        if (shopManager.TryBuyWithCoins(shopItemKey))
+        if (GameManager.Instance.TryBuyItemWithCoins(shopItemKey))
             UpdateButtonState();
     }
 

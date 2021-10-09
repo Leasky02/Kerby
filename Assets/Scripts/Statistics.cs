@@ -54,8 +54,6 @@ public class Statistics : MonoBehaviour
     public bool attemptBallUnlock15;
     public bool attemptBallUnlock20;
 
-    [SerializeField] private GameObject shopManager;
-
     public bool Player1Game;
     public bool Player2Game;
     public bool miniGame;
@@ -254,22 +252,22 @@ public class Statistics : MonoBehaviour
         if (attemptBallUnlock5)
         {
             if (rank > 4)
-                shopManager.GetComponent<ShopManagerBallSkins>().UnlockItem("ball1");
+                GameManager.Instance.GetBallSkinsShopManager().UnlockItem("ball1");
         }
         if (attemptBallUnlock10)
         {
             if (rank > 9)
-                shopManager.GetComponent<ShopManagerBallSkins>().UnlockItem("ball2");
+                GameManager.Instance.GetBallSkinsShopManager().UnlockItem("ball2");
         }
         if (attemptBallUnlock15)
         {
             if (rank > 14)
-                shopManager.GetComponent<ShopManagerBallSkins>().UnlockItem("ball3");
+                GameManager.Instance.GetBallSkinsShopManager().UnlockItem("ball3");
         }
         if (attemptBallUnlock20)
         {
             if (rank > 19)
-                shopManager.GetComponent<ShopManagerBallSkins>().UnlockItem("ball4");
+                GameManager.Instance.GetBallSkinsShopManager().UnlockItem("ball4");
         }
     }
 }

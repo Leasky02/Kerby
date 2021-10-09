@@ -7,11 +7,11 @@ public class ShopItemListControl : MonoBehaviour
     private GameObject shopItemTemplate;
 
     [SerializeField]
-    private IShopManager shopManager;
+    private GameManager.ShopItemType shopItemType;
 
     void Start()
     {
-        List<ShopItem> shopItems = shopManager.GetShopItems();
+        List<ShopItem> shopItems = GameManager.Instance.GetShopItemsOfType(shopItemType);
         shopItems.ForEach(delegate(ShopItem item) {
             if (item.showInShop == false)
                 return;

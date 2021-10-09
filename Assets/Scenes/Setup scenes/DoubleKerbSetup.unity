@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 2
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &6526779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -386,7 +386,6 @@ MonoBehaviour:
   attemptBallUnlock10: 1
   attemptBallUnlock15: 0
   attemptBallUnlock20: 0
-  shopManager: {fileID: 1129548588}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -605,7 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 2
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &88586472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,7 +648,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548590}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -1587,7 +1586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 4
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &404873839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1631,7 +1630,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -1714,7 +1713,6 @@ MonoBehaviour:
   attemptBallUnlock10: 0
   attemptBallUnlock15: 0
   attemptBallUnlock20: 1
-  shopManager: {fileID: 1129548588}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -2285,7 +2283,6 @@ MonoBehaviour:
   attemptBallUnlock10: 0
   attemptBallUnlock15: 0
   attemptBallUnlock20: 0
-  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -2578,7 +2575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 9
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &570713330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2622,7 +2619,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -2709,7 +2706,7 @@ RectTransform:
   - {fileID: 1295854240}
   - {fileID: 5445700}
   m_Father: {fileID: 1609386810}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3340,7 +3337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 1
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &743227843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3384,7 +3381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -3467,7 +3464,6 @@ MonoBehaviour:
   attemptBallUnlock10: 0
   attemptBallUnlock15: 0
   attemptBallUnlock20: 0
-  shopManager: {fileID: 1129548588}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0
@@ -3752,7 +3748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 10
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &851855444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3796,7 +3792,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -3897,7 +3893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 1
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &853597296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3941,7 +3937,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548590}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -4201,7 +4197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 7
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &1038855902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4245,7 +4241,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -4585,7 +4581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 8
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &1112412724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4629,7 +4625,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -4761,71 +4757,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1129548588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1129548589}
-  - component: {fileID: 1129548591}
-  - component: {fileID: 1129548590}
-  m_Layer: 0
-  m_Name: ShopManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1129548589
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129548588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1609386810}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1129548590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129548588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c67df2a2ce03be44b00fad979703c2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: 0
-  coinsTxt: {fileID: 515488848}
---- !u!114 &1129548591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129548588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7b00f8bb53a91468b0e07a7e6ed444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: 0
-  coinsTxt: {fileID: 515488848}
 --- !u!1 &1131891108
 GameObject:
   m_ObjectHideFlags: 0
@@ -5596,7 +5527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 3
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &1249146571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5640,7 +5571,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548590}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -6768,7 +6699,7 @@ RectTransform:
   m_Children:
   - {fileID: 132893601}
   m_Father: {fileID: 1609386810}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6986,7 +6917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 5
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &1594374919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7030,7 +6961,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548590}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -7183,7 +7114,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -4047.0588}
   m_LocalScale: {x: 44.96732, y: 44.96732, z: 44.96732}
   m_Children:
-  - {fileID: 1129548589}
   - {fileID: 574225462}
   - {fileID: 1635459762}
   - {fileID: 1588950372}
@@ -7326,7 +7256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 11
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &1630314715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7370,7 +7300,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -7450,7 +7380,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1609386810}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8397,7 +8327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 4
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &1930105306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8441,7 +8371,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548590}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -8623,7 +8553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 6
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &1969129494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8667,7 +8597,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548590}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -9338,7 +9268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 3
-  shopManager: {fileID: 1129548588}
+  shopManager: {fileID: 0}
 --- !u!114 &2132194267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9382,7 +9312,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1129548591}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 2
         m_Arguments:
@@ -9465,7 +9395,6 @@ MonoBehaviour:
   attemptBallUnlock10: 0
   attemptBallUnlock15: 1
   attemptBallUnlock20: 0
-  shopManager: {fileID: 1129548588}
   Player1Game: 0
   Player2Game: 0
   miniGame: 0

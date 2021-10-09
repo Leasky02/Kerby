@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ShopManagerLocations : IShopManager
 {
+    // Location IDs
     private const string LOCATION_ID_NEW_YORK = "background6";
     private const string LOCATION_ID_DESERT = "background1";
     private const string LOCATION_ID_LOCH_NESS = "background2";
@@ -10,11 +11,12 @@ public class ShopManagerLocations : IShopManager
     private const string LOCATION_ID_HIMALAYAS = "background4";
     private const string LOCATION_ID_RAINFOREST = "background5";
 
+    // Default Location ID
     private const string LOCATION_ID_DEFAULT = LOCATION_ID_NEW_YORK;
 
-    private Dictionary<string, Color> skyColors;
+    private Dictionary<string, Color> skyColors = new Dictionary<string, Color>();
 
-    void Start()
+    public ShopManagerLocations() : base()
     {
         skyColors.Add(LOCATION_ID_NEW_YORK,     new Color(0.631f, 0.611f, 0.827f));  // New York
         skyColors.Add(LOCATION_ID_DESERT,       new Color(0.894f, 0.447f, 0.156f));  // Desert

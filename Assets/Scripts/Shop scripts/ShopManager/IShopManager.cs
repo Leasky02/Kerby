@@ -2,23 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class IShopManager : MonoBehaviour
+public abstract class IShopManager
 {
-    [SerializeField]
-    private Text coinsTxt;
+    private Dictionary<string, ShopItem> shopItemsDict = new Dictionary<string, ShopItem>();
     
-    private int coins;
+    private Dictionary<string, bool> shopItemsPurchasedDict = new Dictionary<string, bool>();
 
-    private static Dictionary<string, ShopItem> shopItemsDict = new Dictionary<string, ShopItem>();
-    
-    private static Dictionary<string, bool> shopItemsPurchasedDict = new Dictionary<string, bool>();
-
-    private static string activeItemKey;
+    private string activeItemKey;
 
     void Awake()
     {
-        coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
-        coinsTxt.text = coins.ToString();
         activeItemKey = "";
     }
 
@@ -34,7 +27,7 @@ public abstract class IShopManager : MonoBehaviour
         if (IsItemAvailable(key))
             return false;
         
-        coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
+        int coins = CoinCount.GetCoins();
         ShopItem item;
         return shopItemsDict.TryGetValue(key, out item) ? (coins >= item.price) : false;
     }
@@ -45,14 +38,24 @@ public abstract class IShopManager : MonoBehaviour
         if (IsItemAvailable(key))
             return false;
         
-        coins = coinsTxt.GetComponent<CoinCount>().GetCoins();
+        int coins = CoinCount.GetCoins();
         ShopItem item;
         if (shopItemsDict.TryGetValue(key, out item))
         {
             if (coins >= item.price)
             {
-                coins = coinsTxt.GetComponent<CoinCount>().SubtractCoins(item.price);
-                GetComponent<AudioSource>().Play();
+                GameObject coinsTxt = GameObject.FindWithTag("CoinTxt");
+                if (coinsTxt != null)
+                    coins = coinsTxt.GetComponent<CoinCount>().SubtractCoins(item.price);
+                else
+                    Debug.LogWarning("Active GameObject with tag CoinTxt not found in scene");
+                
+                GameObject purchaseAudio = GameObject.FindWithTag("AudioPurchase");
+                if (purchaseAudio != null)
+                    purchaseAudio.GetComponent<AudioSource>().Play();
+                else
+                    Debug.LogWarning("Active GameObject with tag AudioPurchase not found in scene");
+                
                 UnlockItem(key);
                 return true;
             }

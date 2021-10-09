@@ -17,10 +17,15 @@ public class CoinCount : MonoBehaviour
     public void Awake()
     {
         jackpotTotal = 0;
-        totalCoins = LoadPlayerPrefsCoins();
+        totalCoins = 1000;//LoadPlayerPrefsCoins();
 
         if (displayCoins)
             UpdateCoinDisplay();
+    }
+
+    public static int GetCoins()
+    {
+        return totalCoins;
     }
 
     public void UpdateCoinDisplay()
@@ -45,11 +50,6 @@ public class CoinCount : MonoBehaviour
         totalCoins -= coinCount;
         UpdateCoinDisplay();
         SavePlayerPrefsCoins(totalCoins);
-        return totalCoins;
-    }
-
-    public int GetCoins()
-    {
         return totalCoins;
     }
 
