@@ -254,22 +254,22 @@ public class Statistics : MonoBehaviour
         if (attemptBallUnlock5)
         {
             if (rank > 4)
-                shopManager.GetComponent<ShopManagerScript>().UnlockItem(1);
+                shopManager.GetComponent<ShopManagerBallSkins>().UnlockItem("ball1");
         }
         if (attemptBallUnlock10)
         {
             if (rank > 9)
-                shopManager.GetComponent<ShopManagerScript>().UnlockItem(2);
+                shopManager.GetComponent<ShopManagerBallSkins>().UnlockItem("ball2");
         }
         if (attemptBallUnlock15)
         {
             if (rank > 14)
-                shopManager.GetComponent<ShopManagerScript>().UnlockItem(3);
+                shopManager.GetComponent<ShopManagerBallSkins>().UnlockItem("ball3");
         }
         if (attemptBallUnlock20)
         {
             if (rank > 19)
-                shopManager.GetComponent<ShopManagerScript>().UnlockItem(4);
+                shopManager.GetComponent<ShopManagerBallSkins>().UnlockItem("ball4");
         }
     }
 }
