@@ -45,10 +45,10 @@ public class ShopManagerBallSkins : IShopManager
         ballParticleColors.Add(BALL_SKIN_ID_GLOBE,          new Color(0.513f, 0.807f, 0.749f));     // globe - light blue color
         ballParticleColors.Add(BALL_SKIN_ID_COIN,           new Color(0.941f, 0.984f, 0.035f));     // coin - gold color
 
-        ballBounceAudioClips.Add(RUBBER_BOUNCE, Resources.Load<AudioClip>("Audio/Ball Bounce/BasketballBounce"));
-        ballBounceAudioClips.Add(STONE_BOUNCE, Resources.Load<AudioClip>("Audio/Ball Bounce/StoneBounce"));
-        ballBounceAudioClips.Add(SLUDGE_BOUNCE, Resources.Load<AudioClip>("Audio/Ball Bounce/FoodBounce"));
-        ballBounceAudioClips.Add(MONEY_BOUNCE, Resources.Load<AudioClip>("Audio/Ball Bounce/CoinBounce"));
+        ballBounceAudioClips.Add(RUBBER_BOUNCE, Resources.Load<AudioClip>("Audio/SoundEffects/BallBounce/BasketballBounce"));
+        ballBounceAudioClips.Add(STONE_BOUNCE, Resources.Load<AudioClip>("Audio/SoundEffects/BallBounce/StoneBounce"));
+        ballBounceAudioClips.Add(SLUDGE_BOUNCE, Resources.Load<AudioClip>("Audio/SoundEffects/BallBounce/FoodBounce"));
+        ballBounceAudioClips.Add(MONEY_BOUNCE, Resources.Load<AudioClip>("Audio/SoundEffects/BallBounce/CoinBounce"));
 
         ballToAudioClipID.Add(BALL_SKIN_ID_ORANGE, RUBBER_BOUNCE);
         ballToAudioClipID.Add(BALL_SKIN_ID_BLUE, RUBBER_BOUNCE);
