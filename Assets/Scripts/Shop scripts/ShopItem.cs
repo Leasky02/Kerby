@@ -8,8 +8,9 @@ public class ShopItem
     public string description;
     public Sprite image;
     public bool showInShop;
+    public int availableAtRank;
 
-    private ShopItem(string _name, string _key, int _price, string _description, string imagePath, bool _showInShop)
+    private ShopItem(string _name, string _key, int _price, string _description, string imagePath, bool _showInShop, int _rank)
     {
         name = _name;
         key = _key;
@@ -17,17 +18,23 @@ public class ShopItem
         description = _description;
         image = Resources.Load<Sprite>(imagePath);
         showInShop = _showInShop;
+        availableAtRank = _rank;
+    }
+    
+    public static ShopItem CreateBallSkinItem(string name, string key, int price, int rank, string description, string imagePath)
+    {
+        return new ShopItem(name, key, price, description, imagePath, true, rank);
     }
     
     public static ShopItem CreateLocationItem(string name, string key, int price, string imagePath, bool showInShop)
     {
         string description = "";
-        return new ShopItem(name, key, price, description, imagePath, showInShop);
+        return new ShopItem(name, key, price, description, imagePath, showInShop, 0);
     }
     
     public static ShopItem CreateMiniGameItem(string name, string key, int price, string description, string imagePath)
     {
-        return new ShopItem(name, key, price, description, imagePath, true);
+        return new ShopItem(name, key, price, description, imagePath, true, 0);
     }
 
     public static ShopItem CreateFromJSON(string jsonString)

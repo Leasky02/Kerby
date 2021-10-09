@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BallSpriteRenderScript : MonoBehaviour
 {
@@ -10,9 +8,9 @@ public class BallSpriteRenderScript : MonoBehaviour
 
     private void Start()
     {
-        ballSpriteRenderer.sprite = GetComponent<ShopManagerScript>().GetBallSpriteForSelectedBall();
-        var psMain = missParticles.main;
-        psMain.startColor = GetComponent<ShopManagerScript>().GetBallParticleColorForSelectedBall();
-        ballCollisions.bounceSound = GetComponent<ShopManagerScript>().GetBounceAudioClipForSelectedBall();
+        ballSpriteRenderer.sprite = GetComponent<ShopManagerBallSkins>().GetActiveBallSkinSprite();
+        ParticleSystem.MainModule psMain = missParticles.main;
+        psMain.startColor = GetComponent<ShopManagerBallSkins>().GetActiveBallParticleColor();
+        ballCollisions.bounceSound = GetComponent<ShopManagerBallSkins>().GetActiveBallBounceAudioClip();
     }
 }
