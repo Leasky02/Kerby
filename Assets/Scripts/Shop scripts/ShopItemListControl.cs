@@ -7,6 +7,9 @@ public class ShopItemListControl : MonoBehaviour
     private GameObject shopItemTemplate;
 
     [SerializeField]
+    private GameObject rankedShopItemTemplate;
+
+    [SerializeField]
     private GameManager.ShopItemType shopItemType;
 
     void Start()
