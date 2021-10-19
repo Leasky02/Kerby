@@ -10,7 +10,7 @@ public abstract class IShopManager
 
     private string activeItemKey;
 
-    void Awake()
+    protected IShopManager()
     {
         activeItemKey = "";
     }
