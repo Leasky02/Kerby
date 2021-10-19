@@ -18,7 +18,6 @@ public class DetectMusic : MonoBehaviour
     private void Update()
     {
         volume = slider.GetComponent<Slider>().value;
-        //Debug.Log(volume);
     }
 
     public void FindMusicPlayer()

@@ -72,7 +72,6 @@ public class CoinCount : MonoBehaviour
         totalCoins += jackpotTotal;
         UpdateCoinDisplay();
         SavePlayerPrefsCoins(totalCoins);
-        Debug.Log(jackpotTotal);
         AdsManager.GetComponent<AdsManagerScript>().AddCounterDuringGame();
         GetComponent<ScoreStreak>().currentStreak(0);
         Ball.GetComponent<BallCollisionsGoldenKerb>().ResetStreak();

@@ -39,7 +39,6 @@ public class PauseScreenScript : MonoBehaviour
 
     public void ProceedExit()
     {
-        Debug.Log(rankUp);
         if (rankUp)
         {
             RankUpScreen();
