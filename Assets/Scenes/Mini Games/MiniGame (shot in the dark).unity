@@ -6286,7 +6286,6 @@ GameObject:
   - component: {fileID: 558128723}
   - component: {fileID: 558128722}
   - component: {fileID: 558128731}
-  - component: {fileID: 558128732}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -6368,7 +6367,6 @@ MonoBehaviour:
   attemptBallUnlock10: 0
   attemptBallUnlock15: 0
   attemptBallUnlock20: 0
-  shopManager: {fileID: 0}
   Player1Game: 1
   Player2Game: 0
   miniGame: 0
@@ -6731,20 +6729,6 @@ MonoBehaviour:
   ballSpriteRenderer: {fileID: 558128730}
   missParticles: {fileID: 1401160947}
   ballCollisions: {fileID: 558128725}
---- !u!114 &558128732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558128720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7b00f8bb53a91468b0e07a7e6ed444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: 0
-  coinsTxt: {fileID: 586961193}
 --- !u!1 &559136769
 GameObject:
   m_ObjectHideFlags: 0

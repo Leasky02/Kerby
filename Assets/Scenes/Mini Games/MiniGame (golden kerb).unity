@@ -1770,7 +1770,6 @@ GameObject:
   - component: {fileID: 604218558}
   - component: {fileID: 604218557}
   - component: {fileID: 604218556}
-  - component: {fileID: 604218554}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -1778,20 +1777,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &604218554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604218553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7b00f8bb53a91468b0e07a7e6ed444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: 0
-  coinsTxt: {fileID: 445033206}
 --- !u!114 &604218556
 MonoBehaviour:
   m_ObjectHideFlags: 0

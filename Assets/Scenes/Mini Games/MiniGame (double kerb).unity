@@ -11827,7 +11827,6 @@ GameObject:
   - component: {fileID: 771641048}
   - component: {fileID: 771641047}
   - component: {fileID: 771641046}
-  - component: {fileID: 771641044}
   - component: {fileID: 771641049}
   - component: {fileID: 771641045}
   - component: {fileID: 771641056}
@@ -11838,20 +11837,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &771641044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 771641043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7b00f8bb53a91468b0e07a7e6ed444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: 0
-  coinsTxt: {fileID: 1814578579}
 --- !u!114 &771641045
 MonoBehaviour:
   m_ObjectHideFlags: 0
