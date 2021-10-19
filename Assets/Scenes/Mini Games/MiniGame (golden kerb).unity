@@ -1852,7 +1852,6 @@ MonoBehaviour:
   attemptBallUnlock10: 0
   attemptBallUnlock15: 0
   attemptBallUnlock20: 0
-  shopManager: {fileID: 0}
   Player1Game: 0
   Player2Game: 0
   miniGame: 1
@@ -2473,7 +2472,6 @@ GameObject:
   - component: {fileID: 753562664}
   - component: {fileID: 753562665}
   - component: {fileID: 753562666}
-  - component: {fileID: 753562667}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -2565,20 +2563,6 @@ MonoBehaviour:
   backgroundSpriteRenderer: {fileID: 753562665}
   skyGameObject: {fileID: 1019025968}
   useLocationBackgrounds: 1
---- !u!114 &753562667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753562663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c67df2a2ce03be44b00fad979703c2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: 0
-  coinsTxt: {fileID: 445033206}
 --- !u!1 &827388040
 GameObject:
   m_ObjectHideFlags: 0
