@@ -3581,6 +3581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemTemplate: {fileID: 1783185719}
+  shopItemRankedTemplate: {fileID: 1208467691}
   rankedShopItemTemplate: {fileID: 1208467691}
   shopItemType: 0
 --- !u!114 &2045316270

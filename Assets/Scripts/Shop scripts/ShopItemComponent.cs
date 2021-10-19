@@ -69,6 +69,11 @@ public class ShopItemComponent : MonoBehaviour
         priceText.text = priceInt.ToString();
     }
 
+    public void SetRank(int rankInt)
+    {
+        priceText.text = "Rank " + rankInt.ToString();
+    }
+
     public void SetDescription(string descriptionString)
     {
         if (descriptionText && descriptionString.Length > 0)

@@ -29,12 +29,15 @@ public class ShopItem
     public static ShopItem CreateLocationItem(string name, string key, int price, string imagePath, bool showInShop)
     {
         string description = "";
-        return new ShopItem(name, key, price, description, imagePath, showInShop, 0);
+        int _availableAtRank = 0;
+        return new ShopItem(name, key, price, description, imagePath, showInShop, _availableAtRank);
     }
     
     public static ShopItem CreateMiniGameItem(string name, string key, int price, string description, string imagePath)
     {
-        return new ShopItem(name, key, price, description, imagePath, true, 0);
+        bool _showInShop = true;
+        int _availableAtRank = 0;
+        return new ShopItem(name, key, price, description, imagePath, _showInShop, _availableAtRank);
     }
 
     public static ShopItem CreateFromJSON(string jsonString)

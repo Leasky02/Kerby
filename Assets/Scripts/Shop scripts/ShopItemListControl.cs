@@ -7,6 +7,9 @@ public class ShopItemListControl : MonoBehaviour
     private GameObject shopItemTemplate;
 
     [SerializeField]
+    private GameObject shopItemRankedTemplate;
+
+    [SerializeField]
     private GameObject rankedShopItemTemplate;
 
     [SerializeField]
@@ -19,13 +22,19 @@ public class ShopItemListControl : MonoBehaviour
             if (item.showInShop == false)
                 return;
 
-            GameObject shopItem = Instantiate(shopItemTemplate) as GameObject;
+            bool itemUnlocksWithRank = (item.availableAtRank > 0);
+
+            GameObject shopItem = itemUnlocksWithRank ? Instantiate(shopItemRankedTemplate) as GameObject : Instantiate(shopItemTemplate) as GameObject;
             
             shopItem.GetComponent<ShopItemComponent>().AssignShopItemKey(item.key);
             shopItem.GetComponent<ShopItemComponent>().SetTitle(item.name);
-            shopItem.GetComponent<ShopItemComponent>().SetPrice(item.price);
             shopItem.GetComponent<ShopItemComponent>().SetDescription(item.description);
             shopItem.GetComponent<ShopItemComponent>().SetImage(item.image);
+
+            if (itemUnlocksWithRank)
+                shopItem.GetComponent<ShopItemComponent>().SetRank(item.availableAtRank);
+            else
+                shopItem.GetComponent<ShopItemComponent>().SetPrice(item.price);
 
             shopItem.transform.SetParent(shopItemTemplate.transform.parent, false);
 
