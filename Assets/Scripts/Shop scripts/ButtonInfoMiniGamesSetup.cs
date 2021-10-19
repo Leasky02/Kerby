@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonInfoMiniGamesSetup : MonoBehaviour
 {
-    public int itemID;
-    public GameObject shopManager;
+    [SerializeField] private string miniGameID;
 
     private void Start()
     {
@@ -15,20 +12,18 @@ public class ButtonInfoMiniGamesSetup : MonoBehaviour
 
     private void UpdateButtonTextAndColor()
     {
-        // var newColorBlock = GetComponent<Button>().colors;
-        // //has it been bought?
-        // if (shopManager.GetComponent<ShopManagerMiniGames>().IsItemAvailable(itemID))
-        // {
-        //     GetComponent<Button>().interactable = true;
-        // }
-        // //if it hasnt been bought...
-        // else
-        // {
-        //     //turns red
-        //     newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-        //     GetComponent<Button>().colors = newColorBlock;
-        //     GetComponent<Button>().interactable = false;
-        //     GetComponentInChildren<Text>().text = ("Locked");
-        // }
+        ColorBlock newColorBlock = GetComponent<Button>().colors;
+        if (GameManager.Instance.GetMiniGamesShopManager().IsItemAvailable(miniGameID))
+        {
+            GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            // turns red
+            newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
+            GetComponent<Button>().colors = newColorBlock;
+            GetComponent<Button>().interactable = false;
+            GetComponentInChildren<Text>().text = ("Locked");
+        }
     }
 }
