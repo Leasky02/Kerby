@@ -34,6 +34,7 @@ public class ShopItemComponent : MonoBehaviour
         ColorBlock colorBlock = buyButton.colors;
         if (GameManager.Instance.IsItemOwned(shopItemKey))
         {
+            // turns grey
             colorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
             buyButton.colors = colorBlock;
             buyButton.interactable = false;
@@ -41,6 +42,7 @@ public class ShopItemComponent : MonoBehaviour
         }
         else if (GameManager.Instance.IsItemAvailableToBuy(shopItemKey) == false)
         {
+            // turns red
             colorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
             buyButton.colors = colorBlock;
             buyButton.interactable = false;

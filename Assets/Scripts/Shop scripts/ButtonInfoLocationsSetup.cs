@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonInfoLocationsSetup : MonoBehaviour
 {
-    public int itemID;
-    public GameObject shopManager;
+    [SerializeField] private string locationID;
 
     private void Start()
     {
@@ -17,34 +17,30 @@ public class ButtonInfoLocationsSetup : MonoBehaviour
 
     private void UpdateButtonTextAndColor()
     {
-        // var newColorBlock = GetComponent<Button>().colors;
-        // //has it been bought?
-        // if (shopManager.GetComponent<ShopManagerLocations>().IsItemAvailable(itemID))
-        // {
-        //     //if so, has it been selected?
-        //     if (shopManager.GetComponent<ShopManagerLocations>().IsSelected(itemID))
-        //     {
-        //         //turns grey
-        //         newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
-        //         GetComponent<Button>().colors = newColorBlock;
-        //         GetComponent<Button>().interactable = false;
-        //         GetComponentInChildren<Text>().text = ("Selected");
-        //     }
-        //     else
-        //     {
-        //         //if not then its available
-        //         GetComponent<Button>().interactable = true;
-        //         GetComponentInChildren<Text>().text = ("Select");
-        //     }
-        // }
-        // //if it hasnt been bought...
-        // else
-        // {
-        //     //turns red
-        //     newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
-        //     GetComponent<Button>().colors = newColorBlock;
-        //     GetComponent<Button>().interactable = false;
-        //     GetComponentInChildren<Text>().text = ("Locked");
-        // }
+        ColorBlock newColorBlock = GetComponent<Button>().colors;
+        if (GameManager.Instance.GetLocationsShopManager().IsItemAvailable(locationID))
+        {
+            if (GameManager.Instance.GetLocationsShopManager().GetActiveItem().key == locationID)
+            {
+                // turns grey
+                newColorBlock.disabledColor = new Color(121f / 255f, 121f / 255f, 121f / 255f, 1f);
+                GetComponent<Button>().colors = newColorBlock;
+                GetComponent<Button>().interactable = false;
+                GetComponentInChildren<Text>().text = ("Selected");
+            }
+            else
+            {
+                GetComponent<Button>().interactable = true;
+                GetComponentInChildren<Text>().text = ("Select");
+            }
+        }
+        else
+        {
+            // turns red
+            newColorBlock.disabledColor = new Color(194f / 255f, 12f / 255f, 12f / 255f, 0.5f);
+            GetComponent<Button>().colors = newColorBlock;
+            GetComponent<Button>().interactable = false;
+            GetComponentInChildren<Text>().text = ("Locked");
+        }
     }
 }

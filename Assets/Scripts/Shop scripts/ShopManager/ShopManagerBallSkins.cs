@@ -91,6 +91,13 @@ public class ShopManagerBallSkins : IShopManager
             "Sprites/Balls/BallCoin"
         ));
         AddShopItem(ShopItem.CreateBallSkinItem(
+            "Orange Ball",
+            BALL_SKIN_ID_ORANGE,
+            0, 1,
+            "The standard ball",
+            "Sprites/Balls/BallOrange"
+        ));
+        AddShopItem(ShopItem.CreateBallSkinItem(
             "Blue Ball",
             BALL_SKIN_ID_BLUE,
             0, 5,
@@ -112,26 +119,26 @@ public class ShopManagerBallSkins : IShopManager
             "Sprites/Balls/BallRed"
         ));
         AddShopItem(ShopItem.CreateBallSkinItem(
-            "Red Purple",
+            "Purple Ball",
             BALL_SKIN_ID_PURPLE,
             0, 20,
             "Available at Rank 20",
             "Sprites/Balls/BallPurple"
         ));
-        AddShopItem(ShopItem.CreateBallSkinItem(
-            "Tractor Wheel",
-            BALL_SKIN_ID_TRACTOR_WHEEL,
-            150, 0,
-            "...",
-            "Sprites/Balls/BallTractorWheel"
-        ));
-        AddShopItem(ShopItem.CreateBallSkinItem(
-            "What's this?",
-            BALL_SKIN_ID_FLUMBLE_GREY,
-            150, 0,
-            "...",
-            "Sprites/Balls/BallFlumbleGrey"
-        ));
+        // AddShopItem(ShopItem.CreateBallSkinItem(
+        //     "Tractor Wheel",
+        //     BALL_SKIN_ID_TRACTOR_WHEEL,
+        //     150, 0,
+        //     "...",
+        //     "Sprites/Balls/BallTractorWheel"
+        // ));
+        // AddShopItem(ShopItem.CreateBallSkinItem(
+        //     "What's this?",
+        //     BALL_SKIN_ID_FLUMBLE_GREY,
+        //     150, 0,
+        //     "...",
+        //     "Sprites/Balls/BallFlumbleGrey"
+        // ));
     }
 
     private ShopItem GetDefaultBallSkin()

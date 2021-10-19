@@ -104,9 +104,14 @@ public abstract class IShopManager
         return shopItemsDict.TryGetValue(key, out item) ? item : null;
     }
 
+    public bool HasItemForKey(string key)
+    {
+        return shopItemsDict.ContainsKey(key);
+    }
+
     public bool HasActiveItem()
     {
-        return activeItemKey.Length > 0 && shopItemsDict.ContainsKey(activeItemKey);
+        return activeItemKey.Length > 0 && HasItemForKey(activeItemKey);
     }
 
     public ShopItem GetActiveItem()

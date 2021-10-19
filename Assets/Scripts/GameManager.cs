@@ -59,12 +59,35 @@ public class GameManager : Singleton<GameManager>
         return false;
     }
 
+    public bool IsItemActive(string key)
+    {
+        foreach (KeyValuePair<ShopItemType, IShopManager> entry in shopManagers)
+        {
+            if (entry.Value.HasActiveItem() && entry.Value.GetActiveItem().key == key)
+                return true;
+        }
+        return false;
+    }
+
     public bool TryBuyItemWithCoins(string key)
     {
         foreach (KeyValuePair<ShopItemType, IShopManager> entry in shopManagers)
         {
             if (entry.Value.TryBuyWithCoins(key))
                 return true;
+        }
+        return false;
+    }
+
+    public bool TrySetActiveItem(string key)
+    {
+        foreach (KeyValuePair<ShopItemType, IShopManager> entry in shopManagers)
+        {
+            if (entry.Value.HasItemForKey(key))
+            {
+                entry.Value.SetActiveItem(key);
+                return true;
+            }
         }
         return false;
     }
