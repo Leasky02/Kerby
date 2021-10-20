@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
@@ -42,7 +40,7 @@ public class AdsManagerScript : MonoBehaviour, IUnityAdsListener
             {
                 ShowInterstitialAd();
                 addCounter = 0;
-                Debug.Log("Show ad");
+                //Debug.Log("Show ad");
             }
         }
     }
@@ -64,7 +62,7 @@ public class AdsManagerScript : MonoBehaviour, IUnityAdsListener
         }
         else
         {
-            Debug.Log("Interstitial ad not ready at the moment! Please try again later!");
+            //Debug.Log("Interstitial ad not ready at the moment! Please try again later!");
         }
         Initialise();
     }
@@ -138,19 +136,19 @@ public class AdsManagerScript : MonoBehaviour, IUnityAdsListener
     public void AddCountdown()
     {
         addCounter++;
-        Debug.Log(addCounter);
+        //Debug.Log(addCounter);
         if (addCounter >= 4)
         {
             ShowInterstitialAd();
             addCounter = 0;
-            Debug.Log("Show ad");
+            //Debug.Log("Show ad");
         }
     }
 
     public void AddCounterDuringGame()
     {
         addCounter++;
-        Debug.Log(addCounter);
+        //Debug.Log(addCounter);
     }
 
     private void FixedUpdate()

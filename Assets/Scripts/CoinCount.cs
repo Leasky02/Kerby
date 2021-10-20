@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+
 public class CoinCount : MonoBehaviour
 {
     public static int totalCoins;
@@ -18,44 +17,39 @@ public class CoinCount : MonoBehaviour
     public void Awake()
     {
         jackpotTotal = 0;
-        totalCoins = PlayerPrefs.GetInt("coins");
+        totalCoins = 1000;//LoadPlayerPrefsCoins();
 
-        if(displayCoins)
-            DisplayCoins();
+        if (displayCoins)
+            UpdateCoinDisplay();
     }
 
-    public void DisplayCoins()
+    public static int GetCoins()
     {
-        GetComponent<Text>().text = ("" + totalCoins);
+        return totalCoins;
     }
 
-    public void AddCoins(int coinCount)
+    public void UpdateCoinDisplay()
+    {
+        GetComponent<Text>().text = totalCoins.ToString();
+    }
+
+    public int AddCoins(int coinCount)
     {
         totalCoins += coinCount;
-        DisplayCoins();
+        UpdateCoinDisplay();
+        SavePlayerPrefsCoins(totalCoins);
         GetComponent<AudioSource>().Play();
         var psMain = ps.GetComponent<ParticleSystem>().main;
         psMain.maxParticles = coinCount;
         ps.Play();
-        PlayerPrefs.SetInt("coins", totalCoins);
+        return totalCoins;
     }
 
-    public void AddCoinsCheat(int coinCount)
-    {
-        totalCoins += coinCount;
-        DisplayCoins();
-        PlayerPrefs.SetInt("coins", totalCoins);
-    }
-
-    public void SubtractCoins(int coinCount)
+    public int SubtractCoins(int coinCount)
     {
         totalCoins -= coinCount;
-        DisplayCoins();
-        PlayerPrefs.SetInt("coins", totalCoins);
-    }
-
-    public int GetCoins()
-    {
+        UpdateCoinDisplay();
+        SavePlayerPrefsCoins(totalCoins);
         return totalCoins;
     }
 
@@ -76,14 +70,11 @@ public class CoinCount : MonoBehaviour
     public void CompleteJackpot()
     {
         totalCoins += jackpotTotal;
-        DisplayCoins();
-        PlayerPrefs.SetInt("coins", totalCoins);
-        Debug.Log(jackpotTotal);
-        //Debug.Log("played");
+        UpdateCoinDisplay();
+        SavePlayerPrefsCoins(totalCoins);
         AdsManager.GetComponent<AdsManagerScript>().AddCounterDuringGame();
         GetComponent<ScoreStreak>().currentStreak(0);
         Ball.GetComponent<BallCollisionsGoldenKerb>().ResetStreak();
-        //Debug.Log("claimed");
         jackpotTotal = 0;
         currentStreak.GetComponent<Text>().text = "Jackpot: " + jackpotTotal;
         jackpotAudio.GetComponent<AudioSource>().Play();
@@ -91,13 +82,20 @@ public class CoinCount : MonoBehaviour
 
     private void Update()
     {
-        if(inGame)
+        if (inGame)
         {
-            if (jackpotTotal > 0)
-                claimButton.GetComponent<Button>().interactable = true;
-            if (jackpotTotal == 0)
-                claimButton.GetComponent<Button>().interactable = false;
+            claimButton.GetComponent<Button>().interactable = (jackpotTotal > 0);
         }
+    }
+
+    private int LoadPlayerPrefsCoins()
+    {
+        return PlayerPrefs.GetInt("coins");
+    }
+
+    private void SavePlayerPrefsCoins(int coins)
+    {
+        PlayerPrefs.SetInt("coins", coins);
     }
 
 }

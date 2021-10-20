@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class DetectMusic : MonoBehaviour
@@ -20,7 +18,6 @@ public class DetectMusic : MonoBehaviour
     private void Update()
     {
         volume = slider.GetComponent<Slider>().value;
-        //Debug.Log(volume);
     }
 
     public void FindMusicPlayer()

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Statistics : MonoBehaviour
@@ -53,8 +51,6 @@ public class Statistics : MonoBehaviour
     public bool attemptBallUnlock10;
     public bool attemptBallUnlock15;
     public bool attemptBallUnlock20;
-
-    [SerializeField] private GameObject shopManager;
 
     public bool Player1Game;
     public bool Player2Game;
@@ -254,22 +250,22 @@ public class Statistics : MonoBehaviour
         if (attemptBallUnlock5)
         {
             if (rank > 4)
-                shopManager.GetComponent<ShopManagerScript>().UnlockItem(1);
+                GameManager.Instance.GetBallSkinsShopManager().UnlockItem("ball1");
         }
         if (attemptBallUnlock10)
         {
             if (rank > 9)
-                shopManager.GetComponent<ShopManagerScript>().UnlockItem(2);
+                GameManager.Instance.GetBallSkinsShopManager().UnlockItem("ball2");
         }
         if (attemptBallUnlock15)
         {
             if (rank > 14)
-                shopManager.GetComponent<ShopManagerScript>().UnlockItem(3);
+                GameManager.Instance.GetBallSkinsShopManager().UnlockItem("ball3");
         }
         if (attemptBallUnlock20)
         {
             if (rank > 19)
-                shopManager.GetComponent<ShopManagerScript>().UnlockItem(4);
+                GameManager.Instance.GetBallSkinsShopManager().UnlockItem("ball4");
         }
     }
 }

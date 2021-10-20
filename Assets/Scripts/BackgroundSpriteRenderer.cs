@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BackgroundSpriteRenderer : MonoBehaviour
 {
@@ -12,8 +10,8 @@ public class BackgroundSpriteRenderer : MonoBehaviour
     {
         if (useLocationBackgrounds)
         {
-            skyGameObject.GetComponent<SpriteRenderer>().color = GetComponent<ShopManagerScriptLocations>().GetSkyColorForSelectedLocation();
-            backgroundSpriteRenderer.sprite = GetComponent<ShopManagerScriptLocations>().GetBackgroundSpriteForSelectedLocation();
+            skyGameObject.GetComponent<SpriteRenderer>().color = GameManager.Instance.GetLocationsShopManager().GetActiveSkyColor();
+            backgroundSpriteRenderer.sprite = GameManager.Instance.GetLocationsShopManager().GetActiveLocationSprite();
         }
         
         ResizeToFitDevice();
