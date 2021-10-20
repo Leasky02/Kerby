@@ -39,23 +39,4 @@ public class ShopItem
         int _availableAtRank = 0;
         return new ShopItem(name, key, price, description, imagePath, _showInShop, _availableAtRank);
     }
-
-    public static ShopItem CreateFromJSON(string jsonString)
-    {
-        return JsonUtility.FromJson<ShopItem>(jsonString);
-    }
-
-    /*
-        Given JSON input:
-        
-        {
-            "name": "Double Kerb",
-            "key": "miniGames2"
-            "price": 350,
-            "description": "Hit both kerbs and win big!"
-        }
-    
-        this example will return a ShopItem object with
-        name == "Double Kerb", key == "miniGames2", price = 350, and description == "Hit both kerbs and win big!".
-    */
 }
