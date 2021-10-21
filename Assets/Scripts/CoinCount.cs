@@ -17,7 +17,7 @@ public class CoinCount : MonoBehaviour
     public void Awake()
     {
         jackpotTotal = 0;
-        totalCoins = 1000;//LoadPlayerPrefsCoins();
+        totalCoins = LoadPlayerPrefsCoins();
 
         if (displayCoins)
             UpdateCoinDisplay();
